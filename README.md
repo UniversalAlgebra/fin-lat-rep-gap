@@ -20,6 +20,7 @@ two methods the paper uses live elsewhere; see
 | [`PJ11.gap`](PJ11.gap) | Realizes **L<sub>11</sub>** as the union of a filter and an ideal in `Sub(SmallGroup(216,153))`, first on 216 points, then on 108. | Section 3.  The file is the computation written out in the discussion after the figure for L<sub>11</sub>, command for command. |
 | [`PJ17.gap`](PJ17.gap) | Realizes **L<sub>17</sub>** as an interval in `Sub(SmallGroup(288,1025))`, where `SmallGroup(288,1025)` is (A<sub>4</sub> × A<sub>4</sub>) : C<sub>2</sub>. | Section 4, the catalog entry for L<sub>17</sub>.  This is a different representation from the 12-element one tabulated there. |
 | [`Hexagon.g`](Hexagon.g) | Checks that Pálfy's example in A<sub>11</sub> really is a hexagon, on a set of size 9! = 362880. | Section 1, the discussion of L<sub>6</sub> and the representations found by Pálfy and Aschbacher. |
+| [`pentagonSearch.g`](pentagonSearch.g) | Verifies that `SmallGroup(216,153)` is the smallest group with the pentagon N<sub>5</sub> as an upper interval. | Section 1, the claim about N<sub>5</sub> and `SmallGroup(216,153)`. |
 
 `L` numbering is the paper's.  It agrees with the `PJ` and `J` numbering used
 in the `.ua` files and in Peter Jipsen's catalog, so `PJ11` is L<sub>11</sub>,
@@ -41,6 +42,19 @@ That call finds every upper interval `[H,G]` with between 4 and 10 elements and
 `H` core-free, among the groups `G` of order 3 to 255.  `findUpperIntervals.g`
 documents its own arguments at the head of each function.
 
+`pentagonSearch.g` answers one question rather than building a catalog, and is
+much faster for it, as follows:
+
+    gap> Read("pentagonSearch.g");
+    gap> pentagonSearch(3, 216);
+
+It avoids computing a single full subgroup lattice.  If `[H,G]` is a pentagon
+then its two coatoms are maximal subgroups `B` and `C` of `G`, and the meet of
+`B` and `C` in the interval is `B` &cap; `C`, which is the bottom `H`.  So the
+candidates for `H` are the intersections of pairs of maximal subgroups, and `B`
+may be taken from a set of class representatives.  Without that, the 2328
+groups of order 128 alone take longer than the whole rest of the search.
+
 Several routines in `findUpperIntervals.g` write their results to a file.  By
 default those files go to the directory GAP was started in.  To send them
 elsewhere, set `FLR_OUTPUT_DIR` before reading the file, as follows:
@@ -61,6 +75,7 @@ the result the paper quotes, as follows:
 | `PJ17.gap` | Covers `[[0,1],[0,2],[0,3],[0,4],[1,6],[2,5],[3,5],[4,5],[5,6]]`, a lattice isomorphic to L<sub>17</sub>, with `[G:H] = 48`. |
 | `Hexagon.g` | Exactly 2 maximal subgroups of A<sub>11</sub> contain `H = C11 : C5`; they meet at `H`; `[H,M11]` and `[H,M11Other]` are 3-element chains; `[H,A11]` has covers `[[0,1],[0,2],[1,3],[2,4],[3,5],[4,5]]`, the hexagon; and `[A11:H] = 362880 = 9!`. |
 | `findUpperIntervals.g` | Reads and runs, and `findUpperIntervals([3,48,4,6,1,1,0,1])` produces its catalog of upper intervals of size 4 to 6 among the groups of order 3 to 48. |
+| `pentagonSearch.g` | `pentagonSearch(3, 216)` examines every group of order at most 216 and every core-free subgroup of each, and finds exactly one group with a pentagon upper interval: `SmallGroup(216,153)`, with twelve such subgroups forming a single conjugacy class, each cyclic of order 6 and so of index 36.  About five minutes. |
 
 ## A warning about indices into GAP's lists
 
