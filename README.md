@@ -135,7 +135,13 @@ related exploratory work, are in [williamdemeo/GAP_wjd][].
 
 ## License
 
-MIT, except for `obsolete/`.  See [`LICENSE.txt`](LICENSE.txt).
+MIT; see [`LICENSE.txt`](LICENSE.txt).
+
+The one exception is
+`obsolete/Install_new_IntermediateSubgroups_method.gap`, which is an early
+version of GAP library code contributed by Alexander Hulpke and is covered by
+GAP's own license, the GNU General Public License version 2 or later.  The MIT
+license does not apply to it.
 
 ## How to cite
 
