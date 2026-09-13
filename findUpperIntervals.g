@@ -6,37 +6,35 @@
 #
 # Notes: This should work on any GAP installation that includes the Small Groups library.
 #
-#        ATTENTION!  YOU MUST EDIT THE VARIABLE pathname 
-#                    which appears in the very first function, getPathName, below.
+#        Several of the routines below write their results to a file.  By
+#        default those files are written to the directory GAP was started in.
+#        To send them somewhere else, set FLR_OUTPUT_DIR before reading this
+#        file, as follows:
+#
+#            FLR_OUTPUT_DIR := "/tmp/gap-outputs/";;
+#            Read("findUpperIntervals.g");
+#
+#        The directory must already exist and the name must end in a slash.
 #
 # Send questions, comments, suggestions to williamdemeo@gmail.com
 #
 
-getPathName := function()    
+if not IsBound(FLR_OUTPUT_DIR) then
+    FLR_OUTPUT_DIR := "";     # the empty string means "the current directory"
+fi;
+
+getPathName := function()
 # Get the path where output files will be stored.
-    local pathname;
-    if ARCH_IS_WINDOWS() then
-        pathname := "H:\\Dropbox\\GAP\\outputs\\";   # <<<<<<<< ATTENTION!  YOU MUST EDIT THIS VARIABLE
-        if IsDirectoryPath(pathname) then
-            Print("Output directory: ", pathname, "\n");
-        else
-            Print("Warning: output directory: ", pathname, " is unavailable... \n");
-            pathname := "C:\\Documents and Settings\\williamdemeo\\My Documents\\Dropbox\\GAP\\outputs\\";
-              if IsDirectoryPath(pathname) then
-                Print("       ...using instead: ", pathname, "\n");
-            else
-                Print("Warning: output directory: ", pathname, " is unavailable... \n");
-            fi;
-        fi;
-    else
-        pathname := "/home/williamdemeo/pub/research/LatticeTheory/DeMeo/GAP/outputs/";
-        if IsDirectoryPath(pathname) then
-            Print("Output directory: ", pathname, "\n");
-        else
-            Print("Warning: output directory: ", pathname, " is unavailable... \n");
-        fi;
+    if FLR_OUTPUT_DIR = "" then
+        return FLR_OUTPUT_DIR;
     fi;
-    return pathname;
+    if IsDirectoryPath(FLR_OUTPUT_DIR) then
+        Print("Output directory: ", FLR_OUTPUT_DIR, "\n");
+        return FLR_OUTPUT_DIR;
+    fi;
+    Print("Warning: output directory ", FLR_OUTPUT_DIR,
+          " is unavailable; writing to the current directory instead.\n");
+    return "";
 end;
 
 
