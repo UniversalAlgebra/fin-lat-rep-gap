@@ -1,5 +1,13 @@
-# The following commands show that the lattice PJ11 occurs as the union 
-# of a filter and ideal in a subgroup lattice of a finite group.
+# The following commands show that the lattice PJ11 (= L_11 of the paper)
+# occurs as the union of a filter and ideal in a subgroup lattice of a finite
+# group.  They are the computation written out in Section 3 of the paper,
+# in the discussion following Figure "L11".
+#
+# Verified on GAP 4.15.1, 2026.09.13.  Everything below reproduces, with one
+# repair: M1 and M2 used to be picked out as Representative(ccsgB[2]) and
+# Representative(ccsgB[4]), and on a current GAP the second of those is no
+# longer a subgroup of H.  They are now selected as what the argument actually
+# needs, namely the two nontrivial proper subgroups of H.
 
 G:=SmallGroup(216,153);    
 ccsg:=ConjugacyClassesSubgroups(G);;
@@ -42,13 +50,14 @@ IsSubgroup(C,K);  # returns false
 # interval [M, G] there is a filter+ideal that is isomorphic to PJ11.
 # This would give us PJ11 on a smaller set than 216.
 
-# Looking at the subgroup lattice of G in XGAP, we see that, 
-# H has only two nontrivial proper subgroups.  These are
-# Representative(ccsg[2]) and Representative(ccsg[4]):
-M1:=Representative(ccsgB[2]);
-M2:=Representative(ccsgB[4]);
-IsSubgroup(H,Representative(ccsgB[2]));  # returns true
-IsSubgroup(H,Representative(ccsgB[4]));  # returns true
+# H is cyclic of order 6, so it has exactly two nontrivial proper subgroups,
+# one of order 2 and one of order 3.
+subsH:=Filtered(List(ConjugacyClassesSubgroups(H), Representative),
+                x -> Size(x) > 1 and Size(x) < Size(H));
+M1:=First(subsH, x -> Size(x) = 2);
+M2:=First(subsH, x -> Size(x) = 3);
+IsSubgroup(H,M1);  # returns true
+IsSubgroup(H,M2);  # returns true
 # We need to find a subgroup that covers one of these two subgroups
 # and is not below A or C.
 intM1B:=IntermediateSubgroups(B,M1);
