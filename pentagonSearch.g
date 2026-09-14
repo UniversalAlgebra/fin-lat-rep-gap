@@ -20,10 +20,15 @@
 #       cheap: only maximal subgroups are needed, never the full subgroup
 #       lattice, which is prohibitive for the 2328 groups of order 128.
 #
-# Result (GAP 4.15.1, 2026.09.13): among all groups G with 3 <= |G| <= 216 the
-# only one with a pentagon upper interval is SmallGroup(216,153).  It has
-# twelve such subgroups H, forming a single conjugacy class, each cyclic of
-# order 6, so each gives index [G:H] = 36.  Running time about five minutes.
+# The search reports, for each group it finds, how many subgroups H witness the
+# pentagon, how many conjugacy classes they fall into, their orders, their
+# indices and their isomorphism type, so that the whole claim is established by
+# this program rather than by a separate one.
+#
+# Result (GAP 4.15.1, 2026.09.14): among all groups G with 3 <= |G| <= 216 the
+# only one with a pentagon upper interval is SmallGroup(216,153), where twelve
+# subgroups H witness it, forming a single conjugacy class, each cyclic of
+# order 6 and so of index [G:H] = 36.  Running time about five minutes.
 
 SizeScreen([256,]);
 
@@ -43,7 +48,7 @@ isPentagonInterval := function(r)
 end;
 
 pentagonSearch := function(n1, n2)
-    local found, n, k, G, maxes, cand, B, C, H;
+    local found, n, k, G, maxes, cand, good, reps, B, C, H;
     found := [];
     for n in [n1..n2] do
       for k in [1..NrSmallGroups(n)] do
@@ -58,18 +63,33 @@ pentagonSearch := function(n1, n2)
             fi;
           od;
         od;
-        for H in cand do
-          if isPentagonInterval(IntermediateSubgroups(G, H)) then
-            AddSet(found, [n, k, Size(H), Index(G, H)]);
-            Print("PENTAGON  SmallGroup(", n, ",", k, ")  |H| = ", Size(H),
-                  "  [G:H] = ", Index(G, H), "\n");
-          fi;
-        od;
+        good := Filtered(cand, H -> isPentagonInterval(IntermediateSubgroups(G, H)));
+        if Length(good) > 0 then
+          # AddSet above removed duplicate subgroups, not conjugate ones, so
+          # count the conjugacy classes explicitly.
+          reps := [];
+          for H in good do
+            if ForAll(reps, K -> RepresentativeAction(G, K, H) = fail) then
+              Add(reps, H);
+            fi;
+          od;
+          Add(found, rec(order := n, id := k,
+                         witnesses := Length(good),
+                         classes := Length(reps),
+                         subgroupOrders := Set(good, Size),
+                         indices := Set(good, H -> Index(G, H)),
+                         isomorphismType := StructureDescription(good[1])));
+          Print("PENTAGON  SmallGroup(", n, ",", k, "): ", Length(good),
+                " subgroup(s) H in ", Length(reps), " conjugacy class(es); ",
+                "orders ", Set(good, Size), ", indices ",
+                Set(good, H -> Index(G, H)), ", isomorphism type ",
+                StructureDescription(good[1]), "\n");
+        fi;
       od;
       Print("# order ", n, " done (", NrSmallGroups(n), " groups); ",
-            "distinct results so far: ", Length(found), "\n");
+            "groups found so far: ", Length(found), "\n");
     od;
-    Print("### FINISHED.  [order, id, |H|, index]: ", found, "\n");
+    Print("### FINISHED.  ", found, "\n");
     return found;
 end;
 

@@ -55,6 +55,10 @@ candidates for `H` are the intersections of pairs of maximal subgroups, and `B`
 may be taken from a set of class representatives.  Without that, the 2328
 groups of order 128 alone take longer than the whole rest of the search.
 
+For each group it finds, it reports how many subgroups witness the pentagon,
+how many conjugacy classes they fall into, and their orders, indices and
+isomorphism type, so the whole claim is established by this one program.
+
 Several routines in `findUpperIntervals.g` write their results to a file.  By
 default those files go to the directory GAP was started in.  To send them
 elsewhere, set `FLR_OUTPUT_DIR` before reading the file, as follows:
@@ -75,7 +79,7 @@ the result the paper quotes, as follows:
 | `PJ17.gap` | Covers `[[0,1],[0,2],[0,3],[0,4],[1,6],[2,5],[3,5],[4,5],[5,6]]`, a lattice isomorphic to L<sub>17</sub>, with `[G:H] = 48`. |
 | `Hexagon.g` | Exactly 2 maximal subgroups of A<sub>11</sub> contain `H = C11 : C5`; they meet at `H`; `[H,M11]` and `[H,M11Other]` are 3-element chains; `[H,A11]` has covers `[[0,1],[0,2],[1,3],[2,4],[3,5],[4,5]]`, the hexagon; and `[A11:H] = 362880 = 9!`. |
 | `findUpperIntervals.g` | Reads and runs, and `findUpperIntervals([3,48,4,6,1,1,0,1])` produces its catalog of upper intervals of size 4 to 6 among the groups of order 3 to 48. |
-| `pentagonSearch.g` | `pentagonSearch(3, 216)` examines every group of order at most 216 and every core-free subgroup of each, and finds exactly one group with a pentagon upper interval: `SmallGroup(216,153)`, with twelve such subgroups forming a single conjugacy class, each cyclic of order 6 and so of index 36.  About five minutes. |
+| `pentagonSearch.g` | `pentagonSearch(3, 216)` examines, for every group of order at most 216, the core-free intersections of pairs of maximal subgroups, which are the only subgroups that can sit at the bottom of a pentagon interval.  It finds exactly one group: `PENTAGON  SmallGroup(216,153): 12 subgroup(s) H in 1 conjugacy class(es); orders [ 6 ], indices [ 36 ], isomorphism type C6`.  About five minutes. |
 
 ## A warning about indices into GAP's lists
 
