@@ -79,7 +79,7 @@ the result the paper quotes, as follows:
 | `PJ17.gap` | Covers `[[0,1],[0,2],[0,3],[0,4],[1,6],[2,5],[3,5],[4,5],[5,6]]`, a lattice isomorphic to L<sub>17</sub>, with `[G:H] = 48`. |
 | `Hexagon.g` | Exactly 2 maximal subgroups of A<sub>11</sub> contain `H = C11 : C5`; they meet at `H`; `[H,M11]` and `[H,M11Other]` are 3-element chains; `[H,A11]` has covers `[[0,1],[0,2],[1,3],[2,4],[3,5],[4,5]]`, the hexagon; and `[A11:H] = 362880 = 9!`. |
 | `findUpperIntervals.g` | Reads and runs, and `findUpperIntervals([3,48,4,6,1,1,0,1])` produces its catalog of upper intervals of size 4 to 6 among the groups of order 3 to 48. |
-| `pentagonSearch.g` | `pentagonSearch(3, 216)` examines, for every group of order at most 216, the core-free intersections of pairs of maximal subgroups, which are the only subgroups that can sit at the bottom of a pentagon interval.  It finds exactly one group: `PENTAGON  SmallGroup(216,153): 12 subgroup(s) H in 1 conjugacy class(es); orders [ 6 ], indices [ 36 ], isomorphism type C6`.  About five minutes. |
+| `pentagonSearch.g` | `pentagonSearch(3, 216)` examines, for every group of order at most 216, the core-free intersections of pairs of maximal subgroups, which are the only subgroups that can sit at the bottom of a pentagon interval.  Over the 214 orders from 3 to 216 it prints exactly one line: `PENTAGON  SmallGroup(216,153): 12 subgroup(s) H in 1 conjugacy class(es); orders [ 6 ], indices [ 36 ], isomorphism type C6`.  Six to thirteen minutes, depending on the machine. |
 
 ## A warning about indices into GAP's lists
 

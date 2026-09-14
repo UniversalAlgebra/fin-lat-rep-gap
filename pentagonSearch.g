@@ -25,10 +25,18 @@
 # indices and their isomorphism type, so that the whole claim is established by
 # this program rather than by a separate one.
 #
-# Result (GAP 4.15.1, 2026.09.14): among all groups G with 3 <= |G| <= 216 the
-# only one with a pentagon upper interval is SmallGroup(216,153), where twelve
-# subgroups H witness it, forming a single conjugacy class, each cyclic of
-# order 6 and so of index [G:H] = 36.  Running time about five minutes.
+# Result (GAP 4.15.1, 2026.09.14), from one run of pentagonSearch(3, 216):
+#
+#   PENTAGON  SmallGroup(216,153): 12 subgroup(s) H in 1 conjugacy class(es);
+#             orders [ 6 ], indices [ 36 ], isomorphism type C6
+#
+# That is the only line the sweep prints.  Among all groups G with
+# 3 <= |G| <= 216, SmallGroup(216,153) is the only one with a pentagon upper
+# interval, and twelve subgroups H witness it, forming a single conjugacy
+# class, each cyclic of order 6 and so of index [G:H] = 36.
+#
+# Running time varies with the machine and with what else is running on it;
+# recorded runs took between six and thirteen minutes.
 
 SizeScreen([256,]);
 
