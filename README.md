@@ -26,6 +26,35 @@ two methods the paper uses live elsewhere; see
 in the `.ua` files and in Peter Jipsen's catalog, so `PJ11` is L<sub>11</sub>,
 `B11` is the algebra for L<sub>11</sub>, and so on.
 
+## The L<sub>10</sub> programs
+
+L<sub>10</sub>, the one lattice with at most seven elements that the paper
+leaves open, is the congruence lattice of a finite algebra after all.  Chenxiao
+Tian's note of 2026-08-28 represents it as the interval [S<sub>3</sub>, PSL(2,64)],
+and a scan of GAP's library of tables of marks finds five more groups with
+L<sub>10</sub> as an upper interval, one of them, Sp(6,2) above a Frobenius
+group of order 42, with the smaller index 34560.  The programs under
+[`L10/`](L10/) verify the note, run the scan, and measure what a machine-checked
+certificate would cost; the report
+[`docs/L10-is-representable.md`](docs/L10-is-representable.md) gives the
+results and the reasoning, and `L10/results/` holds the outputs the report
+quotes.
+
+| File | What it does | Output |
+| --- | --- | --- |
+| [`L10/verifyPSL264.g`](L10/verifyPSL264.g) | Recomputes Tian's interval [S<sub>3</sub>, PSL(2,64)] from his two matrices and corroborates each lemma of his proof. | `L10/results/verifyPSL264.txt` |
+| [`L10/tomScan.g`](L10/tomScan.g) | Hunts a target lattice (L<sub>10</sub> by default) as an upper interval across every table of marks in TomLib, from the marks alone, then recomputes the candidates explicitly. | `L10/results/tomScan.txt` |
+| [`L10/scanAndResolve.sh`](L10/scanAndResolve.sh) | Runs the scan and then one explicit recomputation per table, several at a time. | `L10/results/resolve/` |
+| [`L10/summarizeResolve.sh`](L10/summarizeResolve.sh) | Reduces those recomputations to one line each, with the verdict. | `L10/results/resolveSummary.txt` |
+| [`L10/certificateSizing.g`](L10/certificateSizing.g) | Counts the double cosets and samples the word lengths a certificate of the two smallest representations would need. | `L10/results/certificateSizing.txt` |
+| [`L10/pipelineRaw.g`](L10/pipelineRaw.g) | Cross-checks both intervals with the isomorphism test of the agda-algebras FLRP campaign; needs that repository. | `L10/results/l10.search.json` |
+| [`L10/latticeTests.g`](L10/latticeTests.g) | The target lattice as a poset, and the two routines the others share. | |
+
+These need the `tomlib` package, which standard GAP distributions include, and
+are run from the repository root, as follows:
+
+    gap -A -q -b L10/verifyPSL264.g
+
 ## Running them
 
 Everything here runs on a plain GAP with the Small Groups Library, which comes
