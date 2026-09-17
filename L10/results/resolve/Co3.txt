@@ -1,0 +1,3 @@
+HIT Co3 |G|=495766656000 class 2017 |H|=1440 index 344282400 interval orders [ 1440, 8640, 116640, 699840, 756000, 2903040, 495766656000 ]
+scanned 1 tables; size-7 upper intervals: 41; marks-exact hits: 1; ambiguous cases: 0
+EXPLICIT Co3 class 2017: |G| = 495766656000 |H| = 1440 (C3 : (SL(2,5) : (C2 x C2))) index 344282400 core-free true; interval size 7 orders [ 8640, 116640, 699840, 756000, 2903040 ] structures [ "SL(2,9) : D12", "(((C3 x C3) : C3) : (C3 x C3)) : (SL(2,5) : (C2 x C2))", "(((C3 x C3) : C3) : (C3 x C3)) : (SL(2,9) : (C2 x C2))", "PSU(3,5) : S3", "C2 . O(7,2)" ] covers [ [ 0, 1 ], [ 0, 2 ], [ 0, 4 ], [ 1, 3 ], [ 1, 5 ], [ 2, 3 ], [ 3, 6 ], [ 4, 6 ], [ 5, 6 ] ]; target: true (11874 ms)

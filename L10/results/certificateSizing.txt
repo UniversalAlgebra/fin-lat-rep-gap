@@ -1,0 +1,20 @@
+
+🧮 agda-algebras GAP shell (issue #487)
+   GAP      : 4.15.1
+   libraries: smallgrp / transgrp / primgrp  (packageSet=standard)
+   engine   : scripts/gap/flrp/   (run scripts from the repo root)
+   smoke    : make gap-smoke
+
+== PSL(2,64) / S3: |G| = 262080 |H| = 6 index 43680
+double cosets H g H: 7303 (5439 ms); sizes sum to |G|: true
+representatives inside a coatom: 28; outside: 7275
+sample of 150 outside representatives, BFS time 5955 ms
+stage-1 depths (word over H, g, g^-1 reaching a coatom): [ [ 3, 12 ], [ 4, 7 ], [ 5, 31 ], [ 6, 20 ], [ 7, 51 ], [ 8, 24 ], [ 9, 3 ], [ 15, 1 ], [ 19, 1 ] ]
+stage-2 depths (word over the stage-2 subgroup, g, g^-1 reaching the generators): [ [ 3, 2 ], [ 4, 22 ], [ 5, 57 ], [ 6, 61 ], [ 7, 5 ], [ 8, 3 ] ]
+classes of order 42 in S6(2) with a 7-element upper interval: [ 705 ]
+== Sp(6,2) / 7:6: |G| = 1451520 |H| = 42 index 34560
+double cosets H g H: 847 (19 ms); sizes sum to |G|: true
+representatives inside a coatom: 42; outside: 805
+sample of 100 outside representatives, BFS time 341728 ms
+stage-1 depths (word over H, g, g^-1 reaching a coatom): [ [ 2, 7 ], [ 3, 67 ], [ 4, 11 ], [ 5, 15 ] ]
+stage-2 depths (word over the stage-2 subgroup, g, g^-1 reaching the generators): [ [ 3, 4 ], [ 4, 86 ], [ 5, 9 ], [ 6, 1 ] ]

@@ -1,0 +1,33 @@
+
+🧮 agda-algebras GAP shell (issue #487)
+   GAP      : 4.15.1
+   libraries: smallgrp / transgrp / primgrp  (packageSet=standard)
+   engine   : scripts/gap/flrp/   (run scripts from the repo root)
+   smoke    : make gap-smoke
+
+|G| = 262080
+|H| = 6  H <= G: true  H = S3
+|N_G(H)| = 6
+|C_G(C)| = 63  N_G(C) = D126 of order 126
+conjugacy classes of S3 in G: 1
+conjugates of H: 43680
+IntermediateSubgroups: 8316 ms
+proper intermediate subgroups: 5
+orders: [ 18, 42, 60, 126, 504 ]
+structures: [ "D18", "D42", "A5", "D126", "PSL(2,8)" ]
+covers (0 = H, 6 = G): [ [ 0, 1 ], [ 0, 2 ], [ 0, 3 ], [ 1, 4 ], [ 1, 5 ], [ 2, 4 ], [ 3, 6 ], [ 4, 6 ], [ 5, 6 ] ]
+up-sets (1 = H, 7 = G): [ [ 1, 2, 3, 4, 5, 6, 7 ], [ 2, 5, 6, 7 ], [ 3, 5, 7 ], [ 4, 7 ], [ 5, 7 ], [ 6, 7 ], [ 7 ] ]
+[H, G] isomorphic to L10: true
+maximal subgroup class orders: [ 60, 126, 130, 504, 4032 ]  (725 ms)
+maximal subgroup structures: [ "(C2 x C2 x C2 x C2 x C2 x C2) : C63", "PSL(2,8)", "D130", "D126", "A5" ]
+conjugacy classes of A5 in G: 1
+conjugacy classes of PSL(2,8) in G: 1
+conjugates of A5: 4368  S3 subgroups of one A5: 10  product: 43680
+conjugates of PSL(2,8): 520  S3 subgroups of one PSL(2,8): 84  product: 43680
+conjugates of D126: 2080
+the A5 above H has all entries in GF(4): true
+the PSL(2,8) above H has all entries in GF(8): true
+the D126 above H is N_G(C): true
+<u, v, h> = G: true
+TomLib L2(64): 76 classes of subgroups, |G| = 262080
+class 16 of order 6: overgroup classes [ 16, 57, 61, 64, 68, 72, 76 ], orders [ 6, 18, 42, 60, 126, 504, 262080 ], multiplicities [ 1, 1, 1, 1, 1, 1, 1 ]

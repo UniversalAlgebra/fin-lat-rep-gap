@@ -1,0 +1,5 @@
+AMBIGUOUS 2^4:A6 |G|=5760 class 72 |H|=24 index 240 multiplicities [ [ 72, 1 ], [ 102, 1 ], [ 129, 1 ], [ 133, 2 ], [ 134, 1 ], [ 139, 1 ] ]
+AMBIGUOUS 2^4:A6 |G|=5760 class 73 |H|=24 index 240 multiplicities [ [ 73, 1 ], [ 102, 1 ], [ 129, 1 ], [ 132, 2 ], [ 134, 1 ], [ 139, 1 ] ]
+scanned 1 tables; size-7 upper intervals: 7; marks-exact hits: 0; ambiguous cases: 2
+EXPLICIT 2^4:A6 class 72: |G| = 5760 |H| = 24 (S4) index 240 core-free true; interval size 7 orders [ 48, 192, 360, 360, 384 ] structures [ "C2 x S4", "(C2 x C2 x C2) : S4", "A6", "A6", "(C2 x C2 x C2 x C2) : S4" ] covers [ [ 0, 1 ], [ 0, 3 ], [ 0, 4 ], [ 1, 2 ], [ 2, 5 ], [ 3, 6 ], [ 4, 6 ], [ 5, 6 ] ]; target: false (731 ms)
+EXPLICIT 2^4:A6 class 73: |G| = 5760 |H| = 24 (S4) index 240 core-free true; interval size 7 orders [ 48, 192, 360, 360, 384 ] structures [ "C2 x S4", "(C2 x C2 x C2) : S4", "A6", "A6", "(C2 x C2 x C2 x C2) : S4" ] covers [ [ 0, 1 ], [ 0, 3 ], [ 0, 4 ], [ 1, 2 ], [ 2, 5 ], [ 3, 6 ], [ 4, 6 ], [ 5, 6 ] ]; target: false (126 ms)

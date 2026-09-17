@@ -1,0 +1,5 @@
+AMBIGUOUS L2(47) |G|=51888 class 8 |H|=6 index 8648 multiplicities [ [ 8, 1 ], [ 16, 1 ], [ 21, 1 ], [ 24, 2 ], [ 27, 1 ], [ 29, 1 ] ]
+AMBIGUOUS L2(47) |G|=51888 class 9 |H|=6 index 8648 multiplicities [ [ 9, 1 ], [ 17, 1 ], [ 22, 1 ], [ 23, 2 ], [ 27, 1 ], [ 29, 1 ] ]
+scanned 1 tables; size-7 upper intervals: 5; marks-exact hits: 0; ambiguous cases: 2
+EXPLICIT L2(47) class 8: |G| = 51888 |H| = 6 (S3) index 8648 core-free true; interval size 7 orders [ 12, 24, 24, 24, 48 ] structures [ "D12", "S4", "S4", "D24", "D48" ] covers [ [ 0, 1 ], [ 0, 2 ], [ 0, 3 ], [ 1, 4 ], [ 2, 6 ], [ 3, 6 ], [ 4, 5 ], [ 5, 6 ] ]; target: false (862 ms)
+EXPLICIT L2(47) class 9: |G| = 51888 |H| = 6 (S3) index 8648 core-free true; interval size 7 orders [ 12, 24, 24, 24, 48 ] structures [ "D12", "S4", "S4", "D24", "D48" ] covers [ [ 0, 1 ], [ 0, 2 ], [ 0, 3 ], [ 1, 4 ], [ 2, 6 ], [ 3, 6 ], [ 4, 5 ], [ 5, 6 ] ]; target: false (37 ms)

@@ -1,0 +1,380 @@
+{
+  "candidates": [
+    {
+      "engine": {
+        "gap": "4.15.1",
+        "libraries": {
+          "primgrp": "4.0.1",
+          "smallgrp": "1.5.4",
+          "transgrp": "3.6.5"
+        }
+      },
+      "format": "flrp-gap-interval-raw v1",
+      "group": {
+        "id": [
+          2,
+          64
+        ],
+        "order": 262080,
+        "source": "SL",
+        "structureDescription": "PSL(2,64)"
+      },
+      "interval": {
+        "covers": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            5,
+            6
+          ]
+        ],
+        "leq": [
+          [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          [
+            false,
+            true,
+            false,
+            false,
+            true,
+            true,
+            true
+          ],
+          [
+            false,
+            false,
+            true,
+            false,
+            true,
+            false,
+            true
+          ],
+          [
+            false,
+            false,
+            false,
+            true,
+            false,
+            false,
+            true
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            true,
+            false,
+            true
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            true,
+            true
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            true
+          ]
+        ],
+        "nodes": [
+          {
+            "generators": "[ NewMatrix( Is8BitMatrixRep, GF(2^6), 2, [ [ Z(2)^0, Z(2)^0 ], [ 0*Z(2), Z(2)^0 ] ] ), NewMatrix( Is8BitMatrixRep, GF(2^6), 2, [ [ 0*Z(2), Z(2)^0 ], [ Z(2)^0, 0*Z(2) ] ] ) ]",
+            "index": 0,
+            "order": 6,
+            "role": "bottom"
+          },
+          {
+            "generators": "[ NewMatrix( Is8BitMatrixRep, GF(2^6), 2, [ [ Z(2^3)^4, Z(2^3) ], [ Z(2^3)^2, Z(2^3)^4 ] ] ), NewMatrix( Is8BitMatrixRep, GF(2^6), 2, [ [ Z(2^3)^2, Z(2^3) ], [ Z(2^3)^4, Z(2^3)^2 ] ] ) ]",
+            "index": 1,
+            "order": 18,
+            "role": "interior"
+          },
+          {
+            "generators": "[ NewMatrix( Is8BitMatrixRep, GF(2^6), 2, [ [ Z(2)^0, Z(2)^0 ], [ 0*Z(2), Z(2)^0 ] ] ), NewMatrix( Is8BitMatrixRep, GF(2^6), 2, [ [ Z(2^6)^23, Z(2^6)^58 ], [ Z(2^6)^58, Z(2^3)^3 ] ] ) ]",
+            "index": 2,
+            "order": 42,
+            "role": "interior"
+          },
+          {
+            "generators": "[ NewMatrix( Is8BitMatrixRep, GF(2^6), 2, [ [ Z(2^2)^2, Z(2)^0 ], [ 0*Z(2), Z(2^2) ] ] ), NewMatrix( Is8BitMatrixRep, GF(2^6), 2, [ [ Z(2^2), 0*Z(2) ], [ Z(2^2)^2, Z(2^2)^2 ] ] ) ]",
+            "index": 3,
+            "order": 60,
+            "role": "interior"
+          },
+          {
+            "generators": "[ NewMatrix( Is8BitMatrixRep, GF(2^6), 2, [ [ Z(2^6)^29, Z(2^3)^5 ], [ Z(2^6)^43, Z(2^6)^29 ] ] ), NewMatrix( Is8BitMatrixRep, GF(2^6), 2, [ [ Z(2^3)^4, Z(2^3)^2 ], [ Z(2^3), Z(2^3)^4 ] ] ) ]",
+            "index": 4,
+            "order": 126,
+            "role": "interior"
+          },
+          {
+            "generators": "[ NewMatrix( Is8BitMatrixRep, GF(2^6), 2, [ [ Z(2^3)^3, Z(2^3)^6 ], [ Z(2^3)^4, Z(2^3)^5 ] ] ), NewMatrix( Is8BitMatrixRep, GF(2^6), 2, [ [ Z(2^3)^2, Z(2^3)^4 ], [ Z(2^3)^6, Z(2^3)^6 ] ] ) ]",
+            "index": 5,
+            "order": 504,
+            "role": "interior"
+          },
+          {
+            "generators": "[ NewMatrix( Is8BitMatrixRep, GF(2^6), 2, [ [ Z(2^6), 0*Z(2) ], [ 0*Z(2), Z(2^6)^62 ] ] ), NewMatrix( Is8BitMatrixRep, GF(2^6), 2, [ [ Z(2)^0, Z(2)^0 ], [ Z(2)^0, 0*Z(2) ] ] ) ]",
+            "index": 6,
+            "order": 262080,
+            "role": "top"
+          }
+        ],
+        "size": 7
+      },
+      "subgroup": {
+        "coreFree": true,
+        "coreOrder": 1,
+        "generators": "[ NewMatrix( Is8BitMatrixRep, GF(2^6), 2, [ [ Z(2)^0, Z(2)^0 ], [ 0*Z(2), Z(2)^0 ] ] ), NewMatrix( Is8BitMatrixRep, GF(2^6), 2, [ [ 0*Z(2), Z(2)^0 ], [ Z(2)^0, 0*Z(2) ] ] ) ]",
+        "index": 43680,
+        "order": 6
+      }
+    },
+    {
+      "engine": {
+        "gap": "4.15.1",
+        "libraries": {
+          "primgrp": "4.0.1",
+          "smallgrp": "1.5.4",
+          "transgrp": "3.6.5"
+        }
+      },
+      "format": "flrp-gap-interval-raw v1",
+      "group": {
+        "id": [
+          "S6(2)",
+          705
+        ],
+        "order": 1451520,
+        "source": "TomLib",
+        "structureDescription": "O(7,2)"
+      },
+      "interval": {
+        "covers": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            5,
+            6
+          ]
+        ],
+        "leq": [
+          [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          [
+            false,
+            true,
+            false,
+            false,
+            true,
+            true,
+            true
+          ],
+          [
+            false,
+            false,
+            true,
+            false,
+            false,
+            false,
+            true
+          ],
+          [
+            false,
+            false,
+            false,
+            true,
+            false,
+            true,
+            true
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            true,
+            false,
+            true
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            true,
+            true
+          ],
+          [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            true
+          ]
+        ],
+        "nodes": [
+          {
+            "generators": "[ (1,26,2)(3,27,11)(4,12,25)(5,16,14)(6,10,7)(8,13,22)(15,23,20)(17,24,21)(18,19,28), (1,18)(3,25)(5,16)(6,15)(7,19)(9,13)(11,21)(12,28)(14,22)(17,23)(20,27)(24,26) ]",
+            "index": 0,
+            "order": 42,
+            "role": "bottom"
+          },
+          {
+            "generators": "[ (1,23)(2,6)(3,18)(4,26)(5,13)(7,27)(8,22)(9,14)(10,25)(12,21)(15,28)(19,24), (1,27,8)(2,18,5)(3,21,28)(4,25,20)(6,11,14)(7,26,17)(9,23,12)(10,13,19)(16,24,22) ]",
+            "index": 1,
+            "order": 336,
+            "role": "interior"
+          },
+          {
+            "generators": "[ (1,26)(2,4)(3,13)(5,19)(6,23)(7,16)(8,10)(9,25)(11,21)(14,22)(15,17)(18,24), (1,12,3,25,6,10)(2,17,14,15,18,8)(4,28,19,24,11,20)(5,27,23)(7,16,13,26,9,22) ]",
+            "index": 2,
+            "order": 1512,
+            "role": "interior"
+          },
+          {
+            "generators": "[ (2,19)(3,17)(5,8)(11,18)(15,25)(21,26), (1,12,17,21,23,18,3)(2,11,6,10,4,26,25)(5,8,16,22,13,14,9)(7,19,24,27,28,20,15) ]",
+            "index": 3,
+            "order": 5040,
+            "role": "interior"
+          },
+          {
+            "generators": "[ (1,26)(2,4)(3,9)(5,19)(7,16)(8,10)(11,21)(12,27)(13,25)(14,22)(18,24)(20,28), (1,12,7,13)(2,26,21,19)(3,14,8,28)(5,6,17,16)(10,15,20,18)(11,24,25,23) ]",
+            "index": 4,
+            "order": 12096,
+            "role": "interior"
+          },
+          {
+            "generators": "[ (1,14)(2,5)(6,13)(8,19)(9,23)(22,24), (1,27,19,17,25,26,12)(2,4,21,18,23,28,11)(3,7,15,20,10,24,6)(5,9,14,22,16,13,8) ]",
+            "index": 5,
+            "order": 40320,
+            "role": "interior"
+          },
+          {
+            "generators": "[ (2,3)(6,7)(9,10)(12,14)(17,19)(20,22), (1,2,3,4,5,6,8)(7,9,11,13,16,18,14)(10,12,15,17,20,19,21)(22,23,24,25,26,27,28) ]",
+            "index": 6,
+            "order": 1451520,
+            "role": "top"
+          }
+        ],
+        "size": 7
+      },
+      "subgroup": {
+        "coreFree": true,
+        "coreOrder": 1,
+        "generators": "[ (1,26,2)(3,27,11)(4,12,25)(5,16,14)(6,10,7)(8,13,22)(15,23,20)(17,24,21)(18,19,28), (1,18)(3,25)(5,16)(6,15)(7,19)(9,13)(11,21)(12,28)(14,22)(17,23)(20,27)(24,26) ]",
+        "index": 34560,
+        "order": 42
+      }
+    }
+  ],
+  "config": {
+    "id": [],
+    "indexFilter": 0,
+    "mode": "single-group-interval",
+    "source": "Tian 2026 (SL(2,64)) and TomLib S6(2)",
+    "targetSize": 7
+  },
+  "engine": {
+    "gap": "4.15.1",
+    "libraries": {
+      "primgrp": "4.0.1",
+      "smallgrp": "1.5.4",
+      "transgrp": "3.6.5"
+    }
+  },
+  "format": "flrp-gap-search-raw v1",
+  "scanned": {
+    "groups": 2
+  },
+  "sizeHistogram": {
+    "7": 2
+  }
+}

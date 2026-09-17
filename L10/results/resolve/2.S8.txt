@@ -1,0 +1,3 @@
+AMBIGUOUS 2.S8 |G|=80640 class 301 |H|=192 index 420 multiplicities [ [ 301, 1 ], [ 329, 1 ], [ 343, 1 ], [ 348, 1 ], [ 350, 2 ], [ 354, 1 ] ]
+scanned 1 tables; size-7 upper intervals: 10; marks-exact hits: 0; ambiguous cases: 1
+EXPLICIT 2.S8 class 301: |G| = 80640 |H| = 192 (((C2 x C2 x C2) : (C2 x C2)) : S3) index 420 core-free false; interval size 7 orders [ 384, 1152, 2304, 2880, 2880 ] structures [ "(C2 . S4 = SL(2,3) . C2) : D8", "(GL(2,3) : (C2 x C2)) : S3", "(((C2 . S4 = SL(2,3) . C2) : (C2 x C2)) : S3) : C2", "SL(2,9) : (C2 x C2)", "SL(2,9) : (C2 x C2)" ] covers [ [ 0, 1 ], [ 0, 4 ], [ 0, 5 ], [ 1, 2 ], [ 2, 3 ], [ 3, 6 ], [ 4, 6 ], [ 5, 6 ] ]; target: false (3383 ms)
