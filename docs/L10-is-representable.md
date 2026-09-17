@@ -322,8 +322,17 @@ To reproduce, from the repository root, run the following:
 
 ```sh
 gap -A -q -b L10/verifyPSL264.g
-GAP=gap L10/scanAndResolve.sh
+L10/scanAndResolve.sh
 gap -A -q -b L10/certificateSizing.g
+```
+
+The driver runs whatever `gap` is on the path.  Where GAP is not on the path,
+or is reached through a wrapper, put that command in `GAP`, which is the only
+reason the variable exists; the runs recorded here were made that way, from a
+Nix shell holding GAP and TomLib, as follows:
+
+```sh
+GAP="nix develop /path/to/agda-algebras#gap --command gap" L10/scanAndResolve.sh
 ```
 
 The scan itself is 40 s; the explicit recomputations that follow take a few
