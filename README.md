@@ -21,6 +21,8 @@ two methods the paper uses live elsewhere; see
 | [`PJ17.gap`](PJ17.gap) | Realizes **L<sub>17</sub>** as an interval in `Sub(SmallGroup(288,1025))`, where `SmallGroup(288,1025)` is (A<sub>4</sub> × A<sub>4</sub>) : C<sub>2</sub>. | Section 4, the catalog entry for L<sub>17</sub>.  This is a different representation from the 12-element one tabulated there. |
 | [`Hexagon.g`](Hexagon.g) | Checks that Pálfy's example in A<sub>11</sub> really is a hexagon, on a set of size 9! = 362880. | Section 1, the discussion of L<sub>6</sub> and the representations found by Pálfy and Aschbacher. |
 | [`pentagonSearch.g`](pentagonSearch.g) | Verifies that `SmallGroup(216,153)` is the smallest group with the pentagon N<sub>5</sub> as an upper interval. | Section 1, the claim about N<sub>5</sub> and `SmallGroup(216,153)`. |
+| [`twistedWreathHexagon.g`](twistedWreathHexagon.g) | Computes the sizes of the two twisted wreath product representations of the hexagon, Aschbacher's (Example 8.5 of his 2008 paper) and Pálfy's (2009 lectures), and checks that each interval is the hexagon without building the group. | Section 1, the sizes 60<sup>2160</sup> and 60<sup>120</sup> quoted beside Pálfy's 9!. |
+| [`hexagonSearch.g`](hexagonSearch.g) | Verifies that no group of order at most 2000 has the hexagon L<sub>6</sub> as an upper interval. | Section 1, the claim that the smallest group with a hexagon upper interval has order greater than 2000. |
 
 `L` numbering is the paper's.  It agrees with the `PJ` and `J` numbering used
 in the `.ua` files and in Peter Jipsen's catalog, so `PJ11` is L<sub>11</sub>,
@@ -59,6 +61,35 @@ For each group it finds, it reports how many subgroups witness the pentagon,
 how many conjugacy classes they fall into, and their orders, indices and
 isomorphism type, so the whole claim is established by this one program.
 
+`hexagonSearch.g` is the same search for the hexagon, whose two coatoms also
+meet at its bottom, with one more reduction that makes a sweep to order 2000
+cheap.  By Proposition 2 of Aschbacher's 2008 paper, a group with a hexagon
+upper interval over a core-free subgroup has a unique minimal normal subgroup,
+a direct product of nonabelian simple groups, so it is not solvable.  The
+program sweeps every group of order at most 255, then only the non-solvable
+groups above that, as follows:
+
+    gap> Read("hexagonSearch.g");
+    gap> hexagonSearch(3, 255);
+    gap> hexagonSearchNonsolvable(256, 2000);
+
+Each candidate interval is compared with the hexagon's covering relation by a
+brute-force isomorphism test, never by counting atoms or covers: a count-based
+search in 2010 reported `SmallGroup(24,12)` and `SmallGroup(960,11358)` as
+hexagons, and neither is.
+
+`twistedWreathHexagon.g` takes seconds and needs no arguments:
+
+    gap twistedWreathHexagon.g
+
+It never builds the twisted wreath products, whose orders have thousands of
+digits.  Aschbacher's theorem, in the form Pálfy states it, identifies the
+interval [H, HU] with the dual of the poset of extensions of the twisting map
+to subgroups between the diagonal A<sub>5</sub> and H, with a top added; the
+program enumerates those extensions, constructing each one as a homomorphism
+and checking that it extends the twisting map, and tests the poset against the
+hexagon.
+
 Several routines in `findUpperIntervals.g` write their results to a file.  By
 default those files go to the directory GAP was started in.  To send them
 elsewhere, set `FLR_OUTPUT_DIR` before reading the file, as follows:
@@ -70,8 +101,9 @@ The directory must already exist and the name must end in a slash.
 
 ## Reproducing the paper's numbers
 
-All four programs were run on **GAP 4.15.1** on 2026-09-13.  Each reproduces
-the result the paper quotes, as follows:
+Every program was run on **GAP 4.15.1**, the first five on 2026-09-13 and the
+two hexagon programs on 2026-09-18.  Each reproduces the result the paper
+quotes, as follows:
 
 | Program | Result |
 | --- | --- |
@@ -80,6 +112,8 @@ the result the paper quotes, as follows:
 | `Hexagon.g` | Exactly 2 maximal subgroups of A<sub>11</sub> contain `H = C11 : C5`; they meet at `H`; `[H,M11]` and `[H,M11Other]` are 3-element chains; `[H,A11]` has covers `[[0,1],[0,2],[1,3],[2,4],[3,5],[4,5]]`, the hexagon; and `[A11:H] = 362880 = 9!`. |
 | `findUpperIntervals.g` | Reads and runs, and `findUpperIntervals([3,48,4,6,1,1,0,1])` produces its catalog of upper intervals of size 4 to 6 among the groups of order 3 to 48. |
 | `pentagonSearch.g` | `pentagonSearch(3, 216)` examines, for every group of order at most 216, the core-free intersections of pairs of maximal subgroups, which are the only subgroups that can sit at the bottom of a pentagon interval.  Over the 214 orders from 3 to 216 it prints exactly one line: `PENTAGON  SmallGroup(216,153): 12 subgroup(s) H in 1 conjugacy class(es); orders [ 6 ], indices [ 36 ], isomorphism type C6`.  Six to thirteen minutes, depending on the machine. |
+| `twistedWreathHexagon.g` | For Aschbacher's data (A<sub>5</sub>, A<sub>6</sub> × A<sub>6</sub>, diagonal A<sub>5</sub>): [H:A] = 2160, so [G:H] = 60<sup>2160</sup>, a number of 3841 decimal digits; the twisting map has 1, 0, 2, 1, 1, 0 extensions to A<sub>5</sub>, the diagonal A<sub>6</sub>, A<sub>5</sub> × A<sub>5</sub>, A<sub>5</sub> × A<sub>6</sub>, A<sub>6</sub> × A<sub>5</sub> and A<sub>6</sub> × A<sub>6</sub>; the poset of extensions with a top added has covers `[[0,1],[0,2],[1,3],[2,4],[3,5],[4,5]]`, the hexagon.  For Pálfy's (A<sub>5</sub>, S<sub>5</sub> × A<sub>5</sub>, diagonal A<sub>5</sub>): [H:A] = 120, [G:H] = 60<sup>120</sup>, 214 digits, extensions 1, 2, 2, and again the hexagon.  Three seconds. |
+| `hexagonSearch.g` | `hexagonSearch(3, 255)` examines all 7010 groups of order 3 to 255 and finds no hexagon; `hexagonSearchNonsolvable(256, 2000)` examines the 1010 non-solvable groups of order 256 to 2000 and finds none.  So no group of order at most 2000 has the hexagon as an upper interval.  About eight and sixteen minutes respectively; the second spends most of its time selecting the 588 non-solvable groups of order 1920 out of 241004. |
 
 ## A warning about indices into GAP's lists
 
