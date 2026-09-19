@@ -1,98 +1,121 @@
 scan (marks only) ...
 50 table(s) to recompute explicitly
+done: 2^(1+4)-.S5 (exit 0)
+done: 2^(1+4)-:A5 (exit 0)
+done: 2.(2^4:S5) (exit 0)
+done: 2^4:A5` (exit 0)
+done: 2^4:A8 (exit 0)
+done: 2^4:S5 (exit 0)
+done: 2^4:A6 (exit 0)
+done: 2^5:S5` (exit 0)
+done: 2^4:S6 (exit 0)
+done: 2^4`A8 (exit 0)
+done: 2^5:S6 (exit 0)
+done: 2.A8 (exit 0)
+done: 2^6:U4(2) (exit 0)
+done: 2.S8 (exit 0)
+done: 2^6:A8 (exit 0)
+done: 2.S6(2) (exit 0)
 done: (A5xA5):4 (exit 0)
-done: (S5xS5):2 (exit 0)
+done: A8 (exit 0)
 done: (A8x3):2 (exit 0)
 done: (A8xA4):2 (exit 0)
-done: 2.(2^4:S5) (exit 0)
-done: 2.A8 (exit 0)
-done: 2^(1+4)-.S5 (exit 0)
-done: 2.S8 (exit 0)
-done: 2.S6(2) (exit 0)
-done: 2^4:A5` (exit 0)
-done: 2^(1+4)-:A5 (exit 0)
-done: 2^4:S5 (exit 0)
-done: 2^4:A8 (exit 0)
-done: 2^4:A6 (exit 0)
-done: 2^4:S6 (exit 0)
-done: 2^5:S5` (exit 0)
-done: 2^5:S6 (exit 0)
-done: 2^4`A8 (exit 0)
-done: 2^6:A8 (exit 0)
-done: A8 (exit 0)
+done: G2(4) (exit 0)
 done: 2.(2^5:S6) (exit 0)
 done: Co3 (exit 0)
 done: HS (exit 0)
 done: HS.2 (exit 0)
-done: A12 (exit 0)
-done: He (exit 0)
 done: L2(47) (exit 0)
+done: He (exit 0)
 done: L2(49) (exit 0)
 done: L2(64) (exit 0)
 done: L2(79) (exit 0)
 done: L3(4).3.2_3 (exit 0)
 done: L3(4).6 (exit 0)
+done: A12 (exit 0)
 done: L3(4).D12 (exit 0)
 done: M24 (exit 0)
 done: McL (exit 0)
-done: McL.2 (exit 0)
 done: S12 (exit 0)
 done: S4(4).2 (exit 0)
-done: He.2 (exit 0)
-done: S6(2) (exit 0)
 done: S4(5) (exit 0)
+done: McL.2 (exit 0)
+done: (S5xS5):2 (exit 0)
 done: S8 (exit 0)
 done: S8x2 (exit 0)
+done: S6(2) (exit 0)
 done: S8xS3 (exit 0)
 done: U4(3) (exit 0)
-done: U4(3).2^2_133 (exit 0)
 done: U4(3).2_3 (exit 0)
+done: U4(3).2^2_133 (exit 0)
 done: U4(3).2_1 (exit 0)
-Terminated                 timeout "$LIMIT" $GAP -A -q -o 6g -c "FLR_TABLES := [\"$name\"];; FLR_RESOLVE_BOUND := 10^12;;" -b L10/tomScan.g > "$file" 2>&1
-done: 2^6:U4(2) (exit 143)
-Terminated                 timeout "$LIMIT" $GAP -A -q -o 6g -c "FLR_TABLES := [\"$name\"];; FLR_RESOLVE_BOUND := 10^12;;" -b L10/tomScan.g > "$file" 2>&1
-done: G2(4) (exit 143)
+done: He.2 (exit 0)
 
 summary of the explicit recomputations:
-target: false target: true
-target: false target: false
-target: false target: false
-target: false target: false
-target: false target: false
-target: false target: false
-target: false target: false
-target: false target: false
-target: false target: false
-target: false target: false
-target: false target: false
-2^(1+4)-.S5 class 177: |G| = 3840 |H| = 48 (A4 : C4) index 80 core-free false target: false
-target: false target: false
-A8 class 95: |G| = 20160 |H| = 48 (C2 x S4) index 420 core-free true target: false
-target: true target: false
-target: false EXPLICIT He.2 class 1893: |G| = 8060774400 |H| = 2880 (S6 : C4) index 2798880 core-free true
-target: false EXPLICIT He class 1560: |G| = 4030387200 |H| = 1440 (C2 x S6) index 2798880 core-free true
-target: false EXPLICIT L2(47) class 8: |G| = 51888 |H| = 6 (S3) index 8648 core-free true
-target: false EXPLICIT L2(47) class 9: |G| = 51888 |H| = 6 (S3) index 8648 core-free true
-target: false EXPLICIT L2(49) class 20: |G| = 58800 |H| = 12 (A4) index 4900 core-free true
-target: false EXPLICIT L2(49) class 21: |G| = 58800 |H| = 12 (A4) index 4900 core-free true
-target: false EXPLICIT L2(64) class 16: |G| = 262080 |H| = 6 (S3) index 43680 core-free true
-target: true EXPLICIT L2(79) class 13: |G| = 246480 |H| = 10 (D10) index 24648 core-free true
-target: false EXPLICIT L2(79) class 14: |G| = 246480 |H| = 10 (D10) index 24648 core-free true
-target: false target: false
-target: false target: false
-target: false target: true
-target: true EXPLICIT S12 class 10611: |G| = 479001600 |H| = 25920 (S6 x S3 x S3) index 18480 core-free true
-target: false EXPLICIT S4(4).2 class 844: |G| = 1958400 |H| = 240 (A5 : C4) index 8160 core-free true
-target: false EXPLICIT S4(4).2 class 846: |G| = 1958400 |H| = 240 (A5 : C4) index 8160 core-free true
-target: false EXPLICIT S4(4).2 class 848: |G| = 1958400 |H| = 240 (C2 x S5) index 8160 core-free true
-target: false EXPLICIT S4(4).2 class 850: |G| = 1958400 |H| = 240 (C2 x S5) index 8160 core-free true
-target: false target: false
-S6(2) class 705: |G| = 1451520 |H| = 42 (C7 : C6) index 34560 core-free true target: true
-S8 class 249: |G| = 40320 |H| = 96 (C2 x C2 x S4) index 420 core-free true target: false
-S8x2 class 1176: |G| = 80640 |H| = 192 (C2 x C2 x C2 x S4) index 420 core-free false target: false
-S8xS3 class 2580: |G| = 241920 |H| = 576 (C2 x C2 x S3 x S4) index 420 core-free false target: false
-target: false target: false
-target: false target: false
-target: false target: false
-target: false target: false
-target: false target: false
+2^(1+4)-:A5 class 57: |G| = 1920, |H| = 24 (C2 x A4), index 80, core-free false, interval size 7, target: false
+2^(1+4)-.S5 class 177: |G| = 3840, |H| = 48 (A4 : C4), index 80, core-free false, interval size 7, target: false
+2.(2^5:S6) class 1898: |G| = 46080, |H| = 192 (((C2 x C2 x C2) : (C2 x C2)) : S3), index 240, core-free false, interval size 7, target: false
+2^4:A5` class 33: |G| = 960, |H| = 12 (A4), index 80, core-free true, interval size 7, target: false
+2^4:A6 class 72: |G| = 5760, |H| = 24 (S4), index 240, core-free true, interval size 7, target: false
+2^4:A6 class 73: |G| = 5760, |H| = 24 (S4), index 240, core-free true, interval size 7, target: false
+2^4`A8 class 1114: |G| = 322560, |H| = 768 (((C2 x C2 x C2 x C2) : C2) : S4), index 420, core-free false, interval size 7, target: false
+2^4:A8 class 1701: |G| = 322560, |H| = 768 ((C4 x C4) : (C2 x S4)), index 420, core-free false, interval size 7, target: false
+2^4:S5 class 137: |G| = 1920, |H| = 24 (S4), index 80, core-free true, interval size 7, target: false
+2^4:S6 class 345: |G| = 11520, |H| = 48 (C2 x S4), index 240, core-free true, interval size 7, target: false
+2^4:S6 class 355: |G| = 11520, |H| = 48 (C2 x S4), index 240, core-free true, interval size 7, target: false
+2^5:S5` class 784: |G| = 3840, |H| = 48 (C2 x S4), index 80, core-free false, interval size 7, target: false
+2^5:S6 class 1668: |G| = 23040, |H| = 96 (C2 x C2 x S4), index 240, core-free false, interval size 7, target: false
+2^5:S6 class 1671: |G| = 23040, |H| = 96 (C2 x C2 x S4), index 240, core-free false, interval size 7, target: false
+2^6:A8 class 14607: |G| = 1290240, |H| = 576 ((C2 x C2 x C2 x C2) : (S3 x S3)), index 2240, core-free true, interval size 7, target: false
+2^6:A8 class 14611: |G| = 1290240, |H| = 576 ((C2 x C2 x C2 x C2) : (S3 x S3)), index 2240, core-free true, interval size 7, target: false
+2^6:A8 class 14651: |G| = 1290240, |H| = 720 (S6), index 1792, core-free true, interval size 7, target: false
+2^6:A8 class 14652: |G| = 1290240, |H| = 720 (S6), index 1792, core-free true, interval size 7, target: false
+2^6:A8 class 15038: |G| = 1290240, |H| = 3072 ((C2 x C2 x ((C4 x C2) : C2)) : (C2 x S4)), index 420, core-free false, interval size 7, target: false
+2^6:U4(2) class 8336: |G| = 1658880, |H| = 720 (order 720), index 2304, core-free true, interval size 7, target: false
+2^6:U4(2) class 8415: |G| = 1658880, |H| = 960 (order 960), index 1728, core-free true, interval size 7, target: false
+2.S6(2) class 952: |G| = 2903040, |H| = 84 (C2 x (C7 : C6)), index 34560, core-free false, interval size 7, target: true
+2.S8 class 301: |G| = 80640, |H| = 192 (((C2 x C2 x C2) : (C2 x C2)) : S3), index 420, core-free false, interval size 7, target: false
+A12 class 2481: |G| = 239500800, |H| = 12960 (C3 : (S6 x S3)), index 18480, core-free true, interval size 7, target: false
+(A5xA5):4 class 61: |G| = 14400, |H| = 16 ((C4 x C2) : C2), index 900, core-free true, interval size 7, target: false
+(A5xA5):4 class 62: |G| = 14400, |H| = 16 (C8 : C2), index 900, core-free true, interval size 7, target: false
+A8 class 95: |G| = 20160, |H| = 48 (C2 x S4), index 420, core-free true, interval size 7, target: false
+(A8x3):2 class 583: |G| = 120960, |H| = 288 (C2 x S3 x S4), index 420, core-free false, interval size 7, target: false
+(A8xA4):2 class 2780: |G| = 483840, |H| = 1152 (C2 x S4 x S4), index 420, core-free false, interval size 7, target: false
+G2(4) class 4226: |G| = 251596800, |H| = 1920 (order 1920), index 131040, core-free true, interval size 7, target: false
+He.2 class 1893: |G| = 8060774400, |H| = 2880 (S6 : C4), index 2798880, core-free true, interval size 7, target: false
+He class 1560: |G| = 4030387200, |H| = 1440 (C2 x S6), index 2798880, core-free true, interval size 7, target: false
+HS.2 class 1977: |G| = 88704000, |H| = 768 (((C4 x C4) : C2) : S4), index 115500, core-free true, interval size 7, target: false
+HS class 511: |G| = 44352000, |H| = 384 (((C4 x C4) : (C2 x C2)) : S3), index 115500, core-free true, interval size 7, target: false
+L2(47) class 8: |G| = 51888, |H| = 6 (S3), index 8648, core-free true, interval size 7, target: false
+L2(47) class 9: |G| = 51888, |H| = 6 (S3), index 8648, core-free true, interval size 7, target: false
+L2(49) class 20: |G| = 58800, |H| = 12 (A4), index 4900, core-free true, interval size 7, target: false
+L2(49) class 21: |G| = 58800, |H| = 12 (A4), index 4900, core-free true, interval size 7, target: false
+L2(64) class 16: |G| = 262080, |H| = 6 (S3), index 43680, core-free true, interval size 7, target: true
+L2(79) class 13: |G| = 246480, |H| = 10 (D10), index 24648, core-free true, interval size 7, target: false
+L2(79) class 14: |G| = 246480, |H| = 10 (D10), index 24648, core-free true, interval size 7, target: false
+M24 class 1478: |G| = 244823040, |H| = 3840 ((C2 x C2 x C2 x C2 x C2) : S5), index 63756, core-free true, interval size 7, target: false
+McL.2 class 478: |G| = 1796256000, |H| = 240 (C3 : ((C5 : C8) : C2)), index 7484400, core-free true, interval size 7, target: true
+McL class 199: |G| = 898128000, |H| = 120 (C3 : (C5 : C8)), index 7484400, core-free true, interval size 7, target: true
+S12 class 10611: |G| = 479001600, |H| = 25920 (S6 x S3 x S3), index 18480, core-free true, interval size 7, target: false
+S4(4).2 class 844: |G| = 1958400, |H| = 240 (A5 : C4), index 8160, core-free true, interval size 7, target: false
+S4(4).2 class 846: |G| = 1958400, |H| = 240 (A5 : C4), index 8160, core-free true, interval size 7, target: false
+S4(4).2 class 848: |G| = 1958400, |H| = 240 (C2 x S5), index 8160, core-free true, interval size 7, target: false
+S4(4).2 class 850: |G| = 1958400, |H| = 240 (C2 x S5), index 8160, core-free true, interval size 7, target: false
+S4(5) class 126: |G| = 4680000, |H| = 36 ((C3 x C3) : C4), index 130000, core-free true, interval size 7, target: false
+(S5xS5):2 class 290: |G| = 28800, |H| = 32 ((C4 x C4) : C2), index 900, core-free true, interval size 7, target: false
+(S5xS5):2 class 296: |G| = 28800, |H| = 32 ((C2 x C2 x C2 x C2) : C2), index 900, core-free true, interval size 7, target: false
+S6(2) class 705: |G| = 1451520, |H| = 42 (C7 : C6), index 34560, core-free true, interval size 7, target: true
+S8 class 249: |G| = 40320, |H| = 96 (C2 x C2 x S4), index 420, core-free true, interval size 7, target: false
+S8x2 class 1176: |G| = 80640, |H| = 192 (C2 x C2 x C2 x S4), index 420, core-free false, interval size 7, target: false
+S8xS3 class 2580: |G| = 241920, |H| = 576 (C2 x C2 x S3 x S4), index 420, core-free false, interval size 7, target: false
+U4(3).2^2_133 class 1441: |G| = 13063680, |H| = 384 (C2 x (((C2 x C2 x C2) : (C2 x C2)) : S3)), index 34020, core-free true, interval size 7, target: false
+2.(2^4:S5) class 161: |G| = 3840, |H| = 48 (C2 . S4 = SL(2,3) . C2), index 80, core-free false, interval size 7, target: false
+2.(2^5:S6) class 1900: |G| = 46080, |H| = 192 ((C2 . S4 = SL(2,3) . C2) : (C2 x C2)), index 240, core-free false, interval size 7, target: false
+2.A8 class 122: |G| = 40320, |H| = 96 ((C2 . S4 = SL(2,3) . C2) : C2), index 420, core-free false, interval size 7, target: false
+L3(4).3.2_3 class 91: |G| = 120960, |H| = 48 (GL(2,3)), index 2520, core-free true, interval size 7, target: false
+L3(4).6 class 91: |G| = 120960, |H| = 48 (C2 x SL(2,3)), index 2520, core-free true, interval size 7, target: false
+L3(4).D12 class 305: |G| = 241920, |H| = 96 (C2 x GL(2,3)), index 2520, core-free true, interval size 7, target: false
+U4(3).2_1 class 719: |G| = 6531840, |H| = 192 (C2 x (SL(2,3) : C4)), index 34020, core-free true, interval size 7, target: false
+U4(3).2_3 class 371: |G| = 6531840, |H| = 192 (SL(2,3) : D8), index 34020, core-free true, interval size 7, target: false
+U4(3) class 231: |G| = 3265920, |H| = 96 (SL(2,3) : C4), index 34020, core-free true, interval size 7, target: false
+Co3 class 2017: |G| = 495766656000, |H| = 1440 (C3 : (SL(2,5) : (C2 x C2))), index 344282400, core-free true, interval size 7, target: true

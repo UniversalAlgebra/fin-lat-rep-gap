@@ -1,5 +1,5 @@
 AMBIGUOUS L2(79) |G|=246480 class 13 |H|=10 index 24648 multiplicities [ [ 13, 1 ], [ 21, 1 ], [ 26, 1 ], [ 30, 2 ], [ 33, 1 ], [ 37, 1 ] ]
 AMBIGUOUS L2(79) |G|=246480 class 14 |H|=10 index 24648 multiplicities [ [ 14, 1 ], [ 20, 1 ], [ 27, 1 ], [ 29, 2 ], [ 33, 1 ], [ 37, 1 ] ]
 scanned 1 tables; size-7 upper intervals: 5; marks-exact hits: 0; ambiguous cases: 2
-EXPLICIT L2(79) class 13: |G| = 246480 |H| = 10 (D10) index 24648 core-free true; interval size 7 orders [ 20, 40, 60, 60, 80 ] structures [ "D20", "D40", "A5", "A5", "D80" ] covers [ [ 0, 1 ], [ 0, 3 ], [ 0, 4 ], [ 1, 2 ], [ 2, 5 ], [ 3, 6 ], [ 4, 6 ], [ 5, 6 ] ]; target: false (1041 ms)
-EXPLICIT L2(79) class 14: |G| = 246480 |H| = 10 (D10) index 24648 core-free true; interval size 7 orders [ 20, 40, 60, 60, 80 ] structures [ "D20", "D40", "A5", "A5", "D80" ] covers [ [ 0, 1 ], [ 0, 3 ], [ 0, 4 ], [ 1, 2 ], [ 2, 5 ], [ 3, 6 ], [ 4, 6 ], [ 5, 6 ] ]; target: false (68 ms)
+EXPLICIT L2(79) class 13: |G| = 246480 |H| = 10 (D10) index 24648 core-free true; interval size 7 orders [ 20, 40, 60, 60, 80 ] structures [ "D20", "D40", "A5", "A5", "D80" ] covers [ [ 0, 1 ], [ 0, 3 ], [ 0, 4 ], [ 1, 2 ], [ 2, 5 ], [ 3, 6 ], [ 4, 6 ], [ 5, 6 ] ]; target: false (915 ms)
+EXPLICIT L2(79) class 14: |G| = 246480 |H| = 10 (D10) index 24648 core-free true; interval size 7 orders [ 20, 40, 60, 60, 80 ] structures [ "D20", "D40", "A5", "A5", "D80" ] covers [ [ 0, 1 ], [ 0, 3 ], [ 0, 4 ], [ 1, 2 ], [ 2, 5 ], [ 3, 6 ], [ 4, 6 ], [ 5, 6 ] ]; target: false (61 ms)

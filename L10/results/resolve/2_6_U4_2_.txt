@@ -1,12 +1,5 @@
-
-🧮 agda-algebras GAP shell (issue #487)
-   GAP      : 4.15.1
-   libraries: smallgrp / transgrp / primgrp  (packageSet=standard)
-   engine   : scripts/gap/flrp/   (run scripts from the repo root)
-   smoke    : make gap-smoke
-
 AMBIGUOUS 2^6:U4(2) |G|=1658880 class 8336 |H|=720 index 2304 multiplicities [ [ 8336, 1 ], [ 8464, 1 ], [ 8593, 1 ], [ 8595, 2 ], [ 8600, 1 ], [ 8602, 1 ] ]
 AMBIGUOUS 2^6:U4(2) |G|=1658880 class 8415 |H|=960 index 1728 multiplicities [ [ 8415, 1 ], [ 8519, 1 ], [ 8595, 2 ], [ 8596, 1 ], [ 8601, 1 ], [ 8602, 1 ] ]
 scanned 1 tables; size-7 upper intervals: 40; marks-exact hits: 0; ambiguous cases: 2
-EXPLICIT 2^6:U4(2) class 8336: |G| = 1658880 |H| = 720 (order 720) index 2304 core-free true; interval size 7 orders [ 1440, 23040, 25920, 25920, 46080 ] structures [ "order 1440", "order 23040", "order 25920", "order 25920", "order 46080" ] covers [ [ 0, 1 ], [ 0, 3 ], [ 0, 4 ], [ 1, 2 ], [ 2, 5 ], [ 3, 6 ], [ 4, 6 ], [ 5, 6 ] ]; target: false (1183 ms)
-EXPLICIT 2^6:U4(2) class 8415: |G| = 1658880 |H| = 960 (order 960) index 1728 core-free true; interval size 7 orders [ 1920, 25920, 25920, 30720, 61440 ] structures [ "order 1920", "order 25920", "order 25920", "order 30720", "order 61440" ] covers [ [ 0, 1 ], [ 0, 2 ], [ 0, 3 ], [ 1, 4 ], [ 2, 6 ], [ 3, 6 ], [ 4, 5 ], [ 5, 6 ] ]; target: false (157 ms)
+EXPLICIT 2^6:U4(2) class 8336: |G| = 1658880 |H| = 720 (order 720) index 2304 core-free true; interval size 7 orders [ 1440, 23040, 25920, 25920, 46080 ] structures [ "order 1440", "order 23040", "order 25920", "order 25920", "order 46080" ] covers [ [ 0, 1 ], [ 0, 3 ], [ 0, 4 ], [ 1, 2 ], [ 2, 5 ], [ 3, 6 ], [ 4, 6 ], [ 5, 6 ] ]; target: false (1221 ms)
+EXPLICIT 2^6:U4(2) class 8415: |G| = 1658880 |H| = 960 (order 960) index 1728 core-free true; interval size 7 orders [ 1920, 25920, 25920, 30720, 61440 ] structures [ "order 1920", "order 25920", "order 25920", "order 30720", "order 61440" ] covers [ [ 0, 1 ], [ 0, 2 ], [ 0, 3 ], [ 1, 4 ], [ 2, 6 ], [ 3, 6 ], [ 4, 5 ], [ 5, 6 ] ]; target: false (146 ms)

@@ -1,5 +1,5 @@
 AMBIGUOUS L2(49) |G|=58800 class 20 |H|=12 index 4900 multiplicities [ [ 20, 1 ], [ 30, 1 ], [ 38, 2 ], [ 42, 1 ], [ 46, 1 ], [ 51, 1 ] ]
 AMBIGUOUS L2(49) |G|=58800 class 21 |H|=12 index 4900 multiplicities [ [ 21, 1 ], [ 31, 1 ], [ 39, 2 ], [ 43, 1 ], [ 47, 1 ], [ 51, 1 ] ]
 scanned 1 tables; size-7 upper intervals: 3; marks-exact hits: 0; ambiguous cases: 2
-EXPLICIT L2(49) class 20: |G| = 58800 |H| = 12 (A4) index 4900 core-free true; interval size 7 orders [ 24, 60, 60, 168, 336 ] structures [ "S4", "A5", "A5", "PSL(3,2)", "PSL(3,2) : C2" ] covers [ [ 0, 1 ], [ 0, 2 ], [ 0, 3 ], [ 1, 4 ], [ 2, 6 ], [ 3, 6 ], [ 4, 5 ], [ 5, 6 ] ]; target: false (724 ms)
-EXPLICIT L2(49) class 21: |G| = 58800 |H| = 12 (A4) index 4900 core-free true; interval size 7 orders [ 24, 60, 60, 168, 336 ] structures [ "S4", "A5", "A5", "PSL(3,2)", "PSL(3,2) : C2" ] covers [ [ 0, 1 ], [ 0, 2 ], [ 0, 3 ], [ 1, 4 ], [ 2, 6 ], [ 3, 6 ], [ 4, 5 ], [ 5, 6 ] ]; target: false (100 ms)
+EXPLICIT L2(49) class 20: |G| = 58800 |H| = 12 (A4) index 4900 core-free true; interval size 7 orders [ 24, 60, 60, 168, 336 ] structures [ "S4", "A5", "A5", "PSL(3,2)", "PSL(3,2) : C2" ] covers [ [ 0, 1 ], [ 0, 2 ], [ 0, 3 ], [ 1, 4 ], [ 2, 6 ], [ 3, 6 ], [ 4, 5 ], [ 5, 6 ] ]; target: false (656 ms)
+EXPLICIT L2(49) class 21: |G| = 58800 |H| = 12 (A4) index 4900 core-free true; interval size 7 orders [ 24, 60, 60, 168, 336 ] structures [ "S4", "A5", "A5", "PSL(3,2)", "PSL(3,2) : C2" ] covers [ [ 0, 1 ], [ 0, 2 ], [ 0, 3 ], [ 1, 4 ], [ 2, 6 ], [ 3, 6 ], [ 4, 5 ], [ 5, 6 ] ]; target: false (94 ms)
