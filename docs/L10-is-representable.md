@@ -226,21 +226,26 @@ subgroup X with H < X is the join of the subgroups ⟨H, g⟩ for g in X, so it
 suffices to identify ⟨H, g⟩ for every g in G, and ⟨H, g⟩ depends only on the
 double coset HgH.  For g inside one of the three coatoms, ⟨H, g⟩ is one of
 the five listed subgroups, and a short word shows it.  For g outside them,
-⟨H, g⟩ = G, certified by a word over H and g that reaches an element of a
-coatom (stage 1) and then a word over that coatom and g that reaches a fixed
-set of elements known to generate G together with H (stage 2).  On the
+⟨H, g⟩ = G, certified in two stages against one fixed subgroup, the pendant
+element of the lattice, which both covers H and is maximal: a word over H and
+g reaching an element of it outside H (stage 1), which together with H
+generates it since nothing lies strictly between, and then a word over that
+subgroup and g reaching a fixed set of elements known to generate G together
+with H (stage 2).  Both stages must name the same subgroup or they do not
+compose, which is a mistake the first version of the measurement made.  On the
 algebra side the same certificate reads as principal congruences at the base
 coset, one per H-orbit on G/H, with the lattice's join table closing the
 argument.  `L10/certificateSizing.g` measures the two ingredients, as follows:
 
 | representation | double cosets HgH | outside the coatoms | stage-1 word length | stage-2 word length | group elements as |
 | --- | --- | --- | --- | --- | --- |
-| PSL(2,64) / S<sub>3</sub> | 7303 | 7275 | 3 to 9, with outliers at 15 and 19 | 3 to 8 | 2 × 2 matrices over GF(64) |
-| Sp(6,2) / 7:6 | 847 | 805 | 2 to 5 | 3 to 6 | permutations of 28 points |
+| PSL(2,64) / S<sub>3</sub> | 7303 | 7275 | 3 to 34, mostly 8 to 11 | 3 to 8 | 2 × 2 matrices over GF(64) |
+| Sp(6,2) / 7:6 | 847 | 805 | 2 to 11, mostly 6 to 8 | 3 to 5 | permutations of 28 points |
 
 The word lengths are breadth-first search depths in the coset action over
 samples of 150 and 100 double coset representatives, so a certificate would
-carry ten to twenty letters per representative, with a few longer ones.  Per
+carry on the order of fifteen letters per representative for PSL(2,64) and ten
+for Sp(6,2), with a thin tail of longer ones.  Per
 representative the checker also has to verify that the listed representatives
 exhaust G, which is a size count: the double cosets have sizes |H|<sup>2</sup>
 / |H ∩ H<sup>g</sup>| that must sum to |G|, and |G| itself needs a proof (a
@@ -341,18 +346,26 @@ load, and the driver runs four at a time.  In total the scan settled 67
 intervals explicitly: the six hits, re-derived as a check on the tables, and
 all 61 ambiguous cases.
 
-Two things in this pipeline are worth knowing before rerunning it.  Naming a
-subgroup with `StructureDescription` is a convenience and not part of the test,
-and on a few tables it costs far more than the mathematics: the verdicts for
+Two things in this pipeline are worth knowing before rerunning it, both now
+handled by the driver rather than left to the operator.  Naming a subgroup with
+`StructureDescription` is a convenience and not part of the test, and on a few
+tables it costs far more than the mathematics: the verdicts for
 2<sup>6</sup>:U<sub>4</sub>(2) and G2(4) are reached in one or two seconds and
 the naming of the resulting subgroups of order 30000 to 60000 then runs for
-over half an hour, so those three verdicts were taken with
-`FLR_STRUCTURE := false` and report orders in place of names.  And TomLib
-contains distinct tables whose names differ only in a character that cannot go
-in a filename, `2^4:A8` and ``2^4`A8``, so the driver assigns the output names
-in its sequential part and disambiguates them; without that the second run
-silently overwrites the first, which is how one verdict went missing on the
-first pass here.
+over half an hour, which is longer than the driver's own time limit allows, so
+the driver turns naming off for exactly those tables and their lines report
+orders in place of names.  And TomLib contains distinct tables whose names
+differ only in a character that cannot go in a filename, `2^4:A8` and
+``2^4`A8``, so the driver assigns the output names in its sequential part and
+disambiguates them; without that the second run silently overwrites the first,
+which is how one verdict went missing on the first pass here.
+
+The driver also fails loudly rather than quietly.  It stops if the marks scan
+does not finish, it records a nonzero status from any table's recomputation and
+exits nonzero itself, and it writes `resolveSummary.txt` through
+`summarizeResolve.sh` rather than an inline pattern of its own.  The run
+recorded here settles all 67 intervals under the documented defaults and exits
+zero.
 
 ## Provenance
 
