@@ -1,0 +1,3 @@
+AMBIGUOUS 2^5:S5` |G|=3840 class 784 |H|=48 index 80 multiplicities [ [ 784, 1 ], [ 890, 1 ], [ 934, 2 ], [ 944, 1 ], [ 948, 1 ], [ 953, 1 ] ]
+scanned 1 tables; size-7 upper intervals: 38; marks-exact hits: 0; ambiguous cases: 1
+EXPLICIT 2^5:S5` class 784: |G| = 3840 |H| = 48 (C2 x S4) index 80 core-free false; interval size 7 orders [ 96, 240, 240, 384, 768 ] structures [ "C2 x C2 x S4", "C2 x S5", "C2 x S5", "C2 x ((C2 x C2 x C2) : S4)", "C2 x ((C2 x C2 x C2 x C2) : S4)" ] covers [ [ 0, 1 ], [ 0, 2 ], [ 0, 3 ], [ 1, 4 ], [ 2, 6 ], [ 3, 6 ], [ 4, 5 ], [ 5, 6 ] ]; target: false (142 ms)

@@ -1,0 +1,3 @@
+AMBIGUOUS S8 |G|=40320 class 249 |H|=96 index 420 multiplicities [ [ 249, 1 ], [ 271, 1 ], [ 284, 1 ], [ 290, 1 ], [ 292, 2 ], [ 296, 1 ] ]
+scanned 1 tables; size-7 upper intervals: 8; marks-exact hits: 0; ambiguous cases: 1
+EXPLICIT S8 class 249: |G| = 40320 |H| = 96 (C2 x C2 x S4) index 420 core-free true; interval size 7 orders [ 192, 576, 1152, 1440, 1440 ] structures [ "D8 x S4", "S4 x S4", "(C2 x C2 x C2 x C2) : ((S3 x S3) : C2)", "C2 x S6", "C2 x S6" ] covers [ [ 0, 1 ], [ 0, 4 ], [ 0, 5 ], [ 1, 2 ], [ 2, 3 ], [ 3, 6 ], [ 4, 6 ], [ 5, 6 ] ]; target: false (291 ms)
