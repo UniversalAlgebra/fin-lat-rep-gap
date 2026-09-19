@@ -49,13 +49,18 @@ with one further element x that is a complement of every other nontrivial
 element, as follows:
 
 ```text
-                 ⊤
-              /  |  \
-         (1,1)  (0,2) \
-         /   \  /      \
-     (1,0)   (0,1)      x
-          \    |       /
-               ⊥
+               ⊤
+             / \ \
+            /   \ \
+           /     \ \
+       (1,1)  (0,2) \
+         /  \   /    \
+        /    \ /     x
+     (1,0)  (0,1)   /
+         \    |    /
+          \   |   /
+           \  |  /
+              ⊥
 ```
 
 Its covers are ⊥ ≺ (1,0), (0,1), x;  (1,0), (0,1) ≺ (1,1);  (0,1) ≺ (0,2);

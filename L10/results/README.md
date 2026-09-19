@@ -73,14 +73,14 @@ Two things will otherwise look wrong.
    the assignment does not move between runs.  Without this the second run
    overwrote the first, which is how a verdict once went missing.
 
-**`(order 960)` where other lines name a group.**  Naming a subgroup with
+**`(order 960)` where other lines name a group**.  Naming a subgroup with
 `StructureDescription` is a convenience, not part of the test, and on
 `2^6:U4(2)` and `G2(4)` it runs for over half an hour after a verdict reached
 in about a second, which is longer than the driver's time limit allows.  The
 driver turns naming off for exactly those two, and their lines give orders
 instead.  The verdict is unaffected.
 
-**`tables.txt` is an input, not a result.**  It is the list of tables the
+**`tables.txt` is an input, not a result**.  It is the list of tables the
 driver decided to recompute, derived from `tomScan.txt`, and it is written
 here because that is where the driver works.
 

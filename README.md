@@ -190,10 +190,10 @@ license does not apply to it.
 
 ## How to cite
 
-Cite the article, and cite this repository for the programs:
+Cite [the article][UniversalAlgebra/fin-lat-rep], and cite this repository for the programs:
 
     @misc{fin-lat-rep-gap,
-      author = {William DeMeo},
+      author = {William De{M}eo},
       title  = {fin-lat-rep-gap: {GAP} programs for representing finite lattices},
       year   = {2026},
       note   = {Available at: \verb+https://github.com/UniversalAlgebra/fin-lat-rep-gap+},
