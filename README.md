@@ -17,16 +17,16 @@ two methods the paper uses live elsewhere; see
 | File | What it does | Where the paper uses it |
 | --- | --- | --- |
 | [`findUpperIntervals.g`](findUpperIntervals.g) | Searches the Small Groups, transitive, and primitive group libraries for upper intervals `[H,G]` of a prescribed size, and writes a catalog of the isomorphism types found. | The search behind the claim that `SmallGroup(216,153)` is the smallest group with a pentagon as an upper interval (Section 1). |
-| [`PJ11.gap`](PJ11.gap) | Realizes **L<sub>11</sub>** as the union of a filter and an ideal in `Sub(SmallGroup(216,153))`, first on 216 points, then on 108. | Section 3.  The file is the computation written out in the discussion after the figure for L<sub>11</sub>, command for command. |
-| [`PJ17.gap`](PJ17.gap) | Realizes **L<sub>17</sub>** as an interval in `Sub(SmallGroup(288,1025))`, where `SmallGroup(288,1025)` is (A<sub>4</sub> × A<sub>4</sub>) : C<sub>2</sub>. | Section 4, the catalog entry for L<sub>17</sub>.  This is a different representation from the 12-element one tabulated there. |
-| [`Hexagon.g`](Hexagon.g) | Checks that Pálfy's example in A<sub>11</sub> really is a hexagon, on a set of size 9! = 362880. | Section 1, the discussion of L<sub>6</sub> and the representations found by Pálfy and Aschbacher. |
-| [`pentagonSearch.g`](pentagonSearch.g) | Verifies that `SmallGroup(216,153)` is the smallest group with the pentagon N<sub>5</sub> as an upper interval. | Section 1, the claim about N<sub>5</sub> and `SmallGroup(216,153)`. |
-| [`twistedWreathHexagon.g`](twistedWreathHexagon.g) | Computes the sizes of the two twisted wreath product representations of the hexagon, Aschbacher's (Example 8.5 of his 2008 paper) and Pálfy's (2009 lectures), and checks that each interval is the hexagon without building the group. | Section 1, the sizes 60<sup>2160</sup> and 60<sup>120</sup> quoted beside Pálfy's 9!. |
-| [`hexagonSearch.g`](hexagonSearch.g) | Verifies that no group of order at most 2000 has the hexagon L<sub>6</sub> as an upper interval. | Section 1, the claim that the smallest group with a hexagon upper interval has order greater than 2000. |
+| [`PJ11.gap`](PJ11.gap) | Realizes **L₁₁** as the union of a filter and an ideal in `Sub(SmallGroup(216,153))`, first on 216 points, then on 108. | Section 3.  The file is the computation written out in the discussion after the figure for L₁₁, command for command. |
+| [`PJ17.gap`](PJ17.gap) | Realizes **L₁₇** as an interval in `Sub(SmallGroup(288,1025))`, where `SmallGroup(288,1025)` is (A₄ × A₄) : C₂. | Section 4, the catalog entry for L₁₇.  This is a different representation from the 12-element one tabulated there. |
+| [`Hexagon.g`](Hexagon.g) | Checks that Pálfy's example in A₁₁ really is a hexagon, on a set of size 9! = 362880. | Section 1, the discussion of L₆ and the representations found by Pálfy and Aschbacher. |
+| [`pentagonSearch.g`](pentagonSearch.g) | Verifies that `SmallGroup(216,153)` is the smallest group with the pentagon N₅ as an upper interval. | Section 1, the claim about N₅ and `SmallGroup(216,153)`. |
+| [`twistedWreathHexagon.g`](twistedWreathHexagon.g) | Computes the sizes of the two twisted wreath product representations of the hexagon, Aschbacher's (Example 8.5 of his 2008 paper) and Pálfy's (2009 lectures), and checks that each interval is the hexagon without building the group. | Section 1, the sizes 60²¹⁶⁰ and 60¹²⁰ quoted beside Pálfy's 9!. |
+| [`hexagonSearch.g`](hexagonSearch.g) | Verifies that no group of order at most 2000 has the hexagon L₆ as an upper interval. | Section 1, the claim that the smallest group with a hexagon upper interval has order greater than 2000. |
 
 `L` numbering is the paper's.  It agrees with the `PJ` and `J` numbering used
-in the `.ua` files and in Peter Jipsen's catalog, so `PJ11` is L<sub>11</sub>,
-`B11` is the algebra for L<sub>11</sub>, and so on.
+in the `.ua` files and in Peter Jipsen's catalog, so `PJ11` is L₁₁,
+`B11` is the algebra for L₁₁, and so on.
 
 ## Running them
 
@@ -85,7 +85,7 @@ hexagons, and neither is.
 It never builds the twisted wreath products, whose orders have thousands of
 digits.  Aschbacher's theorem, in the form Pálfy states it, identifies the
 interval [H, HU] with the dual of the poset of extensions of the twisting map
-to subgroups between the diagonal A<sub>5</sub> and H, with a top added; the
+to subgroups between the diagonal A₅ and H, with a top added; the
 program enumerates those extensions, constructing each one as a homomorphism
 and checking that it extends the twisting map, and tests the poset against the
 hexagon.
@@ -108,11 +108,11 @@ quotes, as follows:
 | Program | Result |
 | --- | --- |
 | `PJ11.gap` | `IntermediateSubgroups(G,H)` returns covers `[[0,1],[0,2],[1,3],[2,4],[3,4]]`, so `[H,G]` is the pentagon with `[G:H] = 36`.  `H` is cyclic of order 6; its subgroup of order 2 has index 108 and is covered in `B` by subgroups avoiding `A` and `C`, while its subgroup of order 3 has index 72 and is covered by none, which is exactly the paper's conclusion that 108 is the best this method gives. |
-| `PJ17.gap` | Covers `[[0,1],[0,2],[0,3],[0,4],[1,6],[2,5],[3,5],[4,5],[5,6]]`, a lattice isomorphic to L<sub>17</sub>, with `[G:H] = 48`. |
-| `Hexagon.g` | Exactly 2 maximal subgroups of A<sub>11</sub> contain `H = C11 : C5`; they meet at `H`; `[H,M11]` and `[H,M11Other]` are 3-element chains; `[H,A11]` has covers `[[0,1],[0,2],[1,3],[2,4],[3,5],[4,5]]`, the hexagon; and `[A11:H] = 362880 = 9!`. |
+| `PJ17.gap` | Covers `[[0,1],[0,2],[0,3],[0,4],[1,6],[2,5],[3,5],[4,5],[5,6]]`, a lattice isomorphic to L₁₇, with `[G:H] = 48`. |
+| `Hexagon.g` | Exactly 2 maximal subgroups of A₁₁ contain `H = C11 : C5`; they meet at `H`; `[H,M11]` and `[H,M11Other]` are 3-element chains; `[H,A11]` has covers `[[0,1],[0,2],[1,3],[2,4],[3,5],[4,5]]`, the hexagon; and `[A11:H] = 362880 = 9!`. |
 | `findUpperIntervals.g` | Reads and runs, and `findUpperIntervals([3,48,4,6,1,1,0,1])` produces its catalog of upper intervals of size 4 to 6 among the groups of order 3 to 48. |
 | `pentagonSearch.g` | `pentagonSearch(3, 216)` examines, for every group of order at most 216, the core-free intersections of pairs of maximal subgroups, which are the only subgroups that can sit at the bottom of a pentagon interval.  Over the 214 orders from 3 to 216 it prints exactly one line: `PENTAGON  SmallGroup(216,153): 12 subgroup(s) H in 1 conjugacy class(es); orders [ 6 ], indices [ 36 ], isomorphism type C6`.  Six to thirteen minutes, depending on the machine. |
-| `twistedWreathHexagon.g` | For Aschbacher's data (A<sub>5</sub>, A<sub>6</sub> × A<sub>6</sub>, diagonal A<sub>5</sub>): [H:A] = 2160, so [G:H] = 60<sup>2160</sup>, a number of 3841 decimal digits; the twisting map has 1, 0, 2, 1, 1, 0 extensions to A<sub>5</sub>, the diagonal A<sub>6</sub>, A<sub>5</sub> × A<sub>5</sub>, A<sub>5</sub> × A<sub>6</sub>, A<sub>6</sub> × A<sub>5</sub> and A<sub>6</sub> × A<sub>6</sub>; the poset of extensions with a top added has covers `[[0,1],[0,2],[1,3],[2,4],[3,5],[4,5]]`, the hexagon.  For Pálfy's (A<sub>5</sub>, S<sub>5</sub> × A<sub>5</sub>, diagonal A<sub>5</sub>): [H:A] = 120, [G:H] = 60<sup>120</sup>, 214 digits, extensions 1, 2, 2, and again the hexagon.  Three seconds. |
+| `twistedWreathHexagon.g` | For Aschbacher's data (A₅, A₆ × A₆, diagonal A₅): [H:A] = 2160, so [G:H] = 60²¹⁶⁰, a number of 3841 decimal digits; the twisting map has 1, 0, 2, 1, 1, 0 extensions to A₅, the diagonal A₆, A₅ × A₅, A₅ × A₆, A₆ × A₅ and A₆ × A₆; the poset of extensions with a top added has covers `[[0,1],[0,2],[1,3],[2,4],[3,5],[4,5]]`, the hexagon.  For Pálfy's (A₅, S₅ × A₅, diagonal A₅): [H:A] = 120, [G:H] = 60¹²⁰, 214 digits, extensions 1, 2, 2, and again the hexagon.  Three seconds. |
 | `hexagonSearch.g` | `hexagonSearch(3, 255)` examines all 7010 groups of order 3 to 255 and finds no hexagon; `hexagonSearchNonsolvable(256, 2000)` examines the 1010 non-solvable groups of order 256 to 2000 and finds none.  So no group of order at most 2000 has the hexagon as an upper interval.  About eight and sixteen minutes respectively; the second spends most of its time selecting the 588 non-solvable groups of order 1920 out of 241004. |
 
 ## A warning about indices into GAP's lists
@@ -123,7 +123,7 @@ the list returned by `ConjugacyClassesSubgroups` or
 versions, and both programs had drifted, as follows:
 
 +  In `Hexagon.g`, `MaximalSubgroupClassReps(M11)[4]` was PSL(2,11) when the
-   script was written.  On GAP 4.15.1 it is S<sub>5</sub>, and every step after
+   script was written.  On GAP 4.15.1 it is S₅, and every step after
    it was then working on the wrong subgroups: the script reported 5 maximal
    subgroups containing `H` instead of 2, and `M11 = Intersection(...)` came
    out false.  The whole argument collapsed silently, with no error.
@@ -140,7 +140,7 @@ subgroups by a property and not by an index.
 Three other pieces of software behind the paper live in their own repositories,
 as follows:
 
-+  **The algebras.**  The unary algebras B<sub>1</sub>, ..., B<sub>35</sub>
++  **The algebras.**  The unary algebras B₁, ..., B₃₅
    whose congruence lattices are the lattices catalogued in the paper are in
    `CongruenceLatReps/SmallLatticeReps.ua` in [UACalc/AlgebraFiles][], together
    with the groups and G-sets used here.  They are UACalc files; open them with
@@ -152,8 +152,8 @@ as follows:
    relevant methods are `unaryPolymorphisms` and `unaryPolymorphismsAlgebra`,
    reached from the congruence lattice drawing in the UACalc user interface.
 +  **The overalgebras construction** of [DeMeo (2013)][], used for
-   B<sub>3</sub>, B<sub>6</sub>, B<sub>7</sub>, B<sub>9</sub>,
-   B<sub>13</sub>, B<sub>27</sub>, and B<sub>28</sub>, is in
+   B₃, B₆, B₇, B₉,
+   B₁₃, B₂₇, and B₂₈, is in
    [williamdemeo/Overalgebras][], along with `gap2uacalc.g`, the program that
    converted the GAP groups and G-sets used here into the `.ua` files above.
 

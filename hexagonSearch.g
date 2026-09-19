@@ -17,8 +17,8 @@
 #       does too.
 #
 #   2.  H is the intersection of two maximal subgroups.  The two coatoms B and
-#       C of [H,G] are maximal in G, and their meet in the interval is B /\ C,
-#       which is the bottom of the hexagon.  So H = B /\ C, with B taken from
+#       C of [H,G] are maximal in G, and their meet in the interval is B ⋀ C,
+#       which is the bottom of the hexagon.  So H = B ⋀ C, with B taken from
 #       a set of class representatives.
 #
 # A third reduction, from Aschbacher [1], makes the range above 255 cheap.
@@ -81,7 +81,7 @@ isHexInterval := function(r)
 end;
 
 # The modular elements of the hexagon, for the record: an element m is
-# modular when (a v m) ^ b = a v (m ^ b) for all a <= b.  Expect [ 0, 5 ].
+# modular when (a ∨ m) ∧ b = a ∨ (m ∧ b) for all a <= b.  Expect [ 0, 5 ].
 hexagonModularElements := function()
     local leq, i, j, k, join, meet, isModular;
     leq := List([0..5], i -> List([0..5], j -> i = j or [i,j] in hexTarget));

@@ -30,7 +30,7 @@
 # subgroups A <= T <= H, ordered by restriction, with a largest element added;
 # and an extension is determined by its kernel.  So the program enumerates the
 # subgroups T between A and H, and for each T the normal subgroups K of T with
-# K /\ A = 1 and T/K isomorphic to a subgroup of Aut(B) containing alpha(A),
+# K ⋀ A = 1 and T/K isomorphic to a subgroup of Aut(B) containing alpha(A),
 # constructs beta explicitly and checks that it extends alpha, assembles the
 # poset, and tests it against the hexagon's covering relation by brute force
 # over relabelings.
@@ -38,14 +38,14 @@
 # Both examples have B = A5, with Aut(A5) = S5 and alpha the natural map
 # (a,a) -> a from the diagonal A = {(a,a) : a in A5} onto Inn(A5) = A5.
 #
-#   Aschbacher, Example 8.5:  H = A6 x A6.   [H:A] = 2160.   [G:H] = 60^2160.
-#   Palfy, 2009 lectures:     H = S5 x A5.   [H:A] = 120.    [G:H] = 60^120.
+#   Aschbacher, Example 8.5:  H = A6 x A6.   [H:A] = 2160.   [G:H] = 60²¹⁶⁰
+#   Palfy, 2009 lectures:     H = S5 x A5.   [H:A] = 120.    [G:H] = 60¹²⁰
 #
 # Result (GAP 4.15.1, 2026.09.18), the output of this program:
 #
 #   A5-invariant subgroups of A6, by order: [ 1, 60, 360 ]   (so I_{A6}(A5) = {1, A5, A6}, as Example 8.5 says)
 #   == Aschbacher (A5, A6 x A6, diag A5): |H| = 129600, |A| = 60, [H:A] = 2160
-#      [G:H] = |A5|^[H:A] = 60^2160, a number of 3841 decimal digits
+#      [G:H] = |A5|^[H:A] = 60²¹⁶⁰, a number of 3841 decimal digits
 #      subgroups strictly between A and H: 4 = [ "A6", "A5 x A5", "A5 x A6", "A6 x A5" ]
 #      T = A5 (order 60): 1 extension(s) of alpha, kernels [ "1" ]
 #      T = A6 (order 360): 0 extension(s) of alpha, kernels [  ]
@@ -56,7 +56,7 @@
 #      extension poset with a top added: 6 elements, covers [ [ 0, 1 ], [ 0, 2 ], [ 1, 3 ], [ 2, 4 ], [ 3, 5 ], [ 4, 5 ] ]
 #      ... is the hexagon: true;  its dual Int(H;HU) is the hexagon: true
 #   == Palfy (A5, S5 x A5, diag A5): |H| = 7200, |A| = 60, [H:A] = 120
-#      [G:H] = |A5|^[H:A] = 60^120, a number of 214 decimal digits
+#      [G:H] = |A5|^[H:A] = 60¹²⁰, a number of 214 decimal digits
 #      subgroups strictly between A and H: 1 = [ "A5 x A5" ]
 #      T = A5 (order 60): 1 extension(s) of alpha, kernels [ "1" ]
 #      T = A5 x A5 (order 3600): 2 extension(s) of alpha, kernels [ "A5", "A5" ]
@@ -153,7 +153,7 @@ signalizerLattice := function(name, H, e1, e2)
             List(Filtered(exts, e -> e.T = T), e -> StructureDescription(e.K)), "\n");
     od;
 
-    # The poset: (T1,K1) <= (T2,K2) iff T1 <= T2 and K2 /\ T1 = K1, that is,
+    # The poset: (T1,K1) <= (T2,K2) iff T1 <= T2 and K2 ⋀ T1 = K1, that is,
     # beta2 restricts to beta1.  Element n+1 is the added top.
     n := Length(exts);
     leq := function(i, j)
