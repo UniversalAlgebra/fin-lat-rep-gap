@@ -23,14 +23,19 @@
 #
 #     gap -A -q -b L10/certificateSizing.g
 #
-# Result (GAP 4.15.1, 2026.09.17): see L10/results/certificateSizing.txt.
+# Result (GAP 4.15.1, 2026.09.18): see L10/results/certificateSizing.txt.
 # PSL(2,64)/S3 has 7303 double cosets, 7275 of them outside the three
-# coatoms; in a sample of 150 the stage-1 words have 3 to 9 letters, with two
-# outliers of 15 and 19, and the stage-2 words 3 to 8.  Sp(6,2)/7:6 has 847
-# double cosets, 805 outside; in a sample of 100 the stage-1 words have 2 to 5
-# letters and the stage-2 words 3 to 6.  The samples are drawn with a fixed
-# random seed, so the run is reproducible; the PSL(2,64) half takes about a
-# quarter of a minute and the Sp(6,2) half about six minutes.
+# coatoms; in a sample of 150 the stage-1 words run from 3 to 34 letters and
+# sit mostly between 8 and 11 (132 of the 150), and the stage-2 words run from
+# 3 to 8.  Sp(6,2)/7:6 has 847 double cosets, 805 outside; in a sample of 100
+# the stage-1 words run from 2 to 11 and sit mostly between 6 and 8, and the
+# stage-2 words from 3 to 5.  The samples are drawn with a fixed random seed,
+# so the run is reproducible; the PSL(2,64) half takes about a quarter of a
+# minute and the Sp(6,2) half about five minutes.
+#
+# These stage-1 figures are much larger than the ones first recorded here,
+# which targeted any coatom and so measured a pair of stages that did not
+# compose; see the comment on FLR_SizeCertificate below.
 
 SetPrintFormattingStatus("*stdout*", false);
 Read("L10/latticeTests.g");
@@ -64,8 +69,15 @@ FLR_BfsDepth := function(n, gens, targets)
   return fail;
 end;
 
-# `coatoms` are the maximal members of [H, G] below G; `stage2` is the
-# subgroup whose elements the stage-2 word may use (an atom of the interval);
+# `coatoms` are the maximal members of [H, G] below G, used only to split the
+# double cosets into those inside one and those outside.  `stage2` is the fixed
+# subgroup the two stages are measured against: stage 1 must reach it, and
+# stage 2 may then use its elements.  For the two intervals measured here
+# `stage2` is the pendant element of the lattice, which both covers H and is
+# maximal, so reaching any element of it outside H generates it together with H
+# (nothing lies strictly between), and the two stages compose.  Targeting all
+# the coatoms in stage 1 instead would not compose: reaching some other coatom
+# says nothing about `stage2` being available to stage 2.
 # `gensG` is a set S with <H, S> = G; `nSamples` double coset representatives
 # outside the coatoms are sampled.
 FLR_SizeCertificate := function(label, G, H, coatoms, stage2, gensG, nSamples)
@@ -81,7 +93,7 @@ FLR_SizeCertificate := function(label, G, H, coatoms, stage2, gensG, nSamples)
   act := FactorCosetAction(G, H);
   n := Index(G, H);
   hI := List(GeneratorsOfGroup(H), x -> Image(act, x));
-  tgt1 := Set(Concatenation(List(coatoms, M -> List(Elements(M), a -> 1 ^ Image(act, a)))));
+  tgt1 := Set(List(Elements(stage2), a -> 1 ^ Image(act, a)));
   RemoveSet(tgt1, 1);
   tgt2 := List(gensG, y -> [1 ^ Image(act, y)]);
   s2gens := List(Elements(stage2), a -> Image(act, a));
@@ -95,7 +107,7 @@ FLR_SizeCertificate := function(label, G, H, coatoms, stage2, gensG, nSamples)
     Add(d2, Maximum(List(tgt2, y -> FLR_BfsDepth(n, Concatenation(s2gens, [gI, gI^-1]), y))));
   od;
   Print("sample of ", nSamples, " outside representatives, BFS time ", Runtime() - t, " ms\n");
-  Print("stage-1 depths (word over H, g, g^-1 reaching a coatom): ", Collected(d1), "\n");
+  Print("stage-1 depths (word over H, g, g^-1 reaching the stage-2 subgroup): ", Collected(d1), "\n");
   Print("stage-2 depths (word over the stage-2 subgroup, g, g^-1 reaching the generators): ", Collected(d2), "\n");
 end;
 
