@@ -44,6 +44,13 @@ if (( scan_status != 0 )) || ! grep -q '^scanned ' "$OUT/tomScan.txt"; then
 fi
 # LC_ALL=C: this order decides which of two tables whose names sanitize alike
 # gets the disambiguating suffix below, so it must not vary with the locale.
+# Clear the previous run's per-table reports.  summarizeResolve.sh summarises
+# every .txt in this directory, so a report left behind by an earlier run with
+# a different candidate set would be folded into a summary that claims to
+# describe this one.  Done after the scan has succeeded, so a failed scan
+# leaves the previous results intact.
+rm -f "$OUT/resolve"/*.txt
+
 grep -E '^(HIT|AMBIGUOUS) ' "$OUT/tomScan.txt" | awk '{print $2}' | LC_ALL=C sort -u > "$OUT/resolve/tables.txt"
 echo "$(wc -l < "$OUT/resolve/tables.txt") table(s) to recompute explicitly"
 

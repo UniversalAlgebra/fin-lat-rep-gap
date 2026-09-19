@@ -37,8 +37,10 @@ group of order 42, with the smaller index 34560.  The programs under
 [`L10/`](L10/) verify the note, run the scan, and measure what a machine-checked
 certificate would cost; the report
 [`docs/L10-is-representable.md`](docs/L10-is-representable.md) gives the
-results and the reasoning, and `L10/results/` holds the outputs the report
-quotes.
+results and the reasoning.  The outputs the report quotes are committed under
+[`L10/results/`](L10/results/), whose own
+[README](L10/results/README.md) says what each file holds and how to read the
+per-table records.
 
 | File | What it does | Output |
 | --- | --- | --- |
@@ -50,15 +52,25 @@ quotes.
 | [`L10/pipelineRaw.g`](L10/pipelineRaw.g) | Cross-checks both intervals with the isomorphism test of the agda-algebras FLRP campaign; needs that repository. | `L10/results/l10.search.json` |
 | [`L10/latticeTests.g`](L10/latticeTests.g) | The target lattice as a poset, and the two routines the others share. | |
 
-These need the `tomlib` package, which standard GAP distributions include, and
-are run from the repository root, as follows:
+All of them are run from the repository root, as follows:
 
     gap -A -q -b L10/verifyPSL264.g
 
+They differ in what they need beyond GAP itself.  `tomScan.g` and
+`pipelineRaw.g` require the `tomlib` package, which standard GAP distributions
+include; `verifyPSL264.g` and `certificateSizing.g` use it where it is present
+and skip the one section that needs it where it is not; `latticeTests.g` needs
+nothing.  `pipelineRaw.g` needs more than GAP: a checkout of
+[agda-algebras](https://github.com/ualib/agda-algebras), whose path is passed
+in `FLR_AGDA_ALGEBRAS`, and a Python follow-up from that repository to turn its
+output into the committed verdict.  Its header gives both commands.
+
 ## Running them
 
-Everything here runs on a plain GAP with the Small Groups Library, which comes
-with a standard GAP distribution.  Nothing else is needed.
+The programs in [The L<sub>10</sub> programs](#the-l10-programs) are the
+exception to what follows; their requirements are listed in that section.
+Everything else here runs on a plain GAP with the Small Groups Library, which
+comes with a standard GAP distribution.  Nothing else is needed.
 
     gap Hexagon.g
 

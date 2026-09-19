@@ -55,11 +55,20 @@
 # L10/scanAndResolve.sh runs the whole scan and then one such process per
 # table in parallel.
 #
-# Result (GAP 4.15.1, TomLib 1.2.11, 2026.09.17), for the default target over
-# all 414 tables, marks only, 40 s: 3936 size-7 upper intervals, 6 marks-exact
-# hits (L2(64), S6(2), 2.S6(2), McL, McL.2, Co3) and 61 ambiguous cases, of
-# which every one that could be recomputed was negative.  The full output is
-# L10/results/tomScan.txt, and the explicit recomputations are under
+# Result (GAP 4.15.1, TomLib 1.2.11), for the default target over all 414
+# tables: 3936 size-7 upper intervals, 6 marks-exact hits (L2(64), S6(2),
+# 2.S6(2), McL, McL.2, Co3) and 61 ambiguous cases, every one of which was
+# recomputed explicitly and found to be a different lattice.
+#
+# The committed L10/results/tomScan.txt is the marks-only pass, which takes
+# about 40 s.  That is NOT what the command above produces: the default bound
+# recomputes every candidate group of order at most 20000000 as well, which
+# takes far longer.  The marks-only pass is
+#
+#     gap -A -q -c 'FLR_RESOLVE_BOUND := 0;;' -b L10/tomScan.g
+#
+# which is how L10/scanAndResolve.sh invokes it before recomputing each
+# candidate in its own process; those recomputations are under
 # L10/results/resolve/.
 
 SetPrintFormattingStatus("*stdout*", false);
