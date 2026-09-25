@@ -1,0 +1,20 @@
+
+🧮 agda-algebras GAP shell (issue #487)
+   GAP      : 4.15.1
+   libraries: smallgrp / transgrp / primgrp  (packageSet=standard)
+   engine   : scripts/gap/flrp/   (run scripts from the repo root)
+   smoke    : make gap-smoke
+
+== PSL(2,64) / S3: |G| = 262080 |H| = 6 index 43680
+double cosets H g H: 7303 (6294 ms); sizes sum to |G|: true
+representatives inside a coatom: 28; outside: 7275
+sample of 150 outside representatives, BFS time 5257 ms
+stage-1 depths (word over H, g, g^-1 reaching the stage-2 subgroup): [ [ 3, 1 ], [ 4, 2 ], [ 5, 2 ], [ 6, 2 ], [ 7, 5 ], [ 8, 23 ], [ 9, 55 ], [ 10, 32 ], [ 11, 22 ], [ 12, 1 ], [ 13, 1 ], [ 17, 1 ], [ 19, 1 ], [ 29, 1 ], [ 34, 1 ] ]
+stage-2 depths (word over the stage-2 subgroup, g, g^-1 reaching the generators): [ [ 3, 1 ], [ 4, 12 ], [ 5, 57 ], [ 6, 72 ], [ 7, 4 ], [ 8, 4 ] ]
+classes of order 42 in S6(2) with a 7-element upper interval: [ 705 ]
+== Sp(6,2) / 7:6: |G| = 1451520 |H| = 42 index 34560
+double cosets H g H: 847 (17 ms); sizes sum to |G|: true
+representatives inside a coatom: 42; outside: 805
+sample of 100 outside representatives, BFS time 281264 ms
+stage-1 depths (word over H, g, g^-1 reaching the stage-2 subgroup): [ [ 2, 1 ], [ 3, 6 ], [ 4, 3 ], [ 5, 10 ], [ 6, 16 ], [ 7, 32 ], [ 8, 26 ], [ 9, 3 ], [ 11, 3 ] ]
+stage-2 depths (word over the stage-2 subgroup, g, g^-1 reaching the generators): [ [ 3, 5 ], [ 4, 86 ], [ 5, 9 ] ]

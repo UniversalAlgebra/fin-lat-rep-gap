@@ -1,0 +1,135 @@
+AMBIGUOUS A8 |G|=20160 class 95 |H|=48 index 420 multiplicities [ [ 95, 1 ], [ 114, 1 ], [ 129, 1 ], [ 132, 1 ], [ 133, 2 ], [ 137, 1 ] ]
+AMBIGUOUS L2(47) |G|=51888 class 8 |H|=6 index 8648 multiplicities [ [ 8, 1 ], [ 16, 1 ], [ 21, 1 ], [ 24, 2 ], [ 27, 1 ], [ 29, 1 ] ]
+AMBIGUOUS L2(47) |G|=51888 class 9 |H|=6 index 8648 multiplicities [ [ 9, 1 ], [ 17, 1 ], [ 22, 1 ], [ 23, 2 ], [ 27, 1 ], [ 29, 1 ] ]
+AMBIGUOUS L2(49) |G|=58800 class 20 |H|=12 index 4900 multiplicities [ [ 20, 1 ], [ 30, 1 ], [ 38, 2 ], [ 42, 1 ], [ 46, 1 ], [ 51, 1 ] ]
+AMBIGUOUS L2(49) |G|=58800 class 21 |H|=12 index 4900 multiplicities [ [ 21, 1 ], [ 31, 1 ], [ 39, 2 ], [ 43, 1 ], [ 47, 1 ], [ 51, 1 ] ]
+AMBIGUOUS L2(79) |G|=246480 class 13 |H|=10 index 24648 multiplicities [ [ 13, 1 ], [ 21, 1 ], [ 26, 1 ], [ 30, 2 ], [ 33, 1 ], [ 37, 1 ] ]
+AMBIGUOUS L2(79) |G|=246480 class 14 |H|=10 index 24648 multiplicities [ [ 14, 1 ], [ 20, 1 ], [ 27, 1 ], [ 29, 2 ], [ 33, 1 ], [ 37, 1 ] ]
+HIT L2(64) |G|=262080 class 16 |H|=6 index 43680 interval orders [ 6, 18, 42, 60, 126, 504, 262080 ]
+AMBIGUOUS 2^(1+4)-:A5 |G|=1920 class 57 |H|=24 index 80 multiplicities [ [ 57, 1 ], [ 71, 1 ], [ 79, 2 ], [ 82, 1 ], [ 85, 1 ], [ 86, 1 ] ]
+AMBIGUOUS 2^(1+4)-.S5 |G|=3840 class 177 |H|=48 index 80 multiplicities [ [ 177, 1 ], [ 212, 1 ], [ 230, 2 ], [ 234, 1 ], [ 238, 1 ], [ 240, 1 ] ]
+AMBIGUOUS U4(3) |G|=3265920 class 231 |H|=96 index 34020 multiplicities [ [ 231, 1 ], [ 286, 1 ], [ 329, 1 ], [ 356, 1 ], [ 374, 2 ], [ 381, 1 ] ]
+AMBIGUOUS S8 |G|=40320 class 249 |H|=96 index 420 multiplicities [ [ 249, 1 ], [ 271, 1 ], [ 284, 1 ], [ 290, 1 ], [ 292, 2 ], [ 296, 1 ] ]
+AMBIGUOUS M24 |G|=244823040 class 1478 |H|=3840 index 63756 multiplicities [ [ 1478, 1 ], [ 1497, 1 ], [ 1514, 1 ], [ 1523, 1 ], [ 1527, 2 ], [ 1529, 1 ] ]
+AMBIGUOUS 2.A8 |G|=40320 class 122 |H|=96 index 420 multiplicities [ [ 122, 1 ], [ 145, 1 ], [ 159, 1 ], [ 163, 1 ], [ 164, 2 ], [ 168, 1 ] ]
+AMBIGUOUS 2^4:A6 |G|=5760 class 72 |H|=24 index 240 multiplicities [ [ 72, 1 ], [ 102, 1 ], [ 129, 1 ], [ 133, 2 ], [ 134, 1 ], [ 139, 1 ] ]
+AMBIGUOUS 2^4:A6 |G|=5760 class 73 |H|=24 index 240 multiplicities [ [ 73, 1 ], [ 102, 1 ], [ 129, 1 ], [ 132, 2 ], [ 134, 1 ], [ 139, 1 ] ]
+AMBIGUOUS 2^4:A8 |G|=322560 class 1701 |H|=768 index 420 multiplicities [ [ 1701, 1 ], [ 1737, 1 ], [ 1755, 1 ], [ 1759, 1 ], [ 1761, 2 ], [ 1766, 1 ] ]
+AMBIGUOUS 2^4:A5` |G|=960 class 33 |H|=12 index 80 multiplicities [ [ 33, 1 ], [ 48, 1 ], [ 56, 2 ], [ 59, 1 ], [ 62, 1 ], [ 63, 1 ] ]
+AMBIGUOUS 2^4:S6 |G|=11520 class 345 |H|=48 index 240 multiplicities [ [ 345, 1 ], [ 433, 1 ], [ 477, 1 ], [ 488, 2 ], [ 490, 1 ], [ 498, 1 ] ]
+AMBIGUOUS 2^4:S6 |G|=11520 class 355 |H|=48 index 240 multiplicities [ [ 355, 1 ], [ 433, 1 ], [ 477, 1 ], [ 489, 2 ], [ 490, 1 ], [ 498, 1 ] ]
+AMBIGUOUS 2^4:S5 |G|=1920 class 137 |H|=24 index 80 multiplicities [ [ 137, 1 ], [ 168, 1 ], [ 187, 2 ], [ 191, 1 ], [ 195, 1 ], [ 197, 1 ] ]
+AMBIGUOUS L3(4).3.2_3 |G|=120960 class 91 |H|=48 index 2520 multiplicities [ [ 91, 1 ], [ 110, 1 ], [ 130, 1 ], [ 132, 2 ], [ 137, 1 ], [ 142, 1 ] ]
+AMBIGUOUS L3(4).6 |G|=120960 class 91 |H|=48 index 2520 multiplicities [ [ 91, 1 ], [ 111, 1 ], [ 132, 1 ], [ 133, 2 ], [ 138, 1 ], [ 143, 1 ] ]
+AMBIGUOUS L3(4).D12 |G|=241920 class 305 |H|=96 index 2520 multiplicities [ [ 305, 1 ], [ 350, 1 ], [ 388, 1 ], [ 389, 2 ], [ 397, 1 ], [ 409, 1 ] ]
+AMBIGUOUS U4(3).2_3 |G|=6531840 class 371 |H|=192 index 34020 multiplicities [ [ 371, 1 ], [ 422, 1 ], [ 466, 1 ], [ 483, 1 ], [ 505, 2 ], [ 515, 1 ] ]
+AMBIGUOUS U4(3).2_1 |G|=6531840 class 719 |H|=192 index 34020 multiplicities [ [ 719, 1 ], [ 821, 1 ], [ 902, 1 ], [ 940, 1 ], [ 970, 2 ], [ 983, 1 ] ]
+AMBIGUOUS HS |G|=44352000 class 511 |H|=384 index 115500 multiplicities [ [ 511, 1 ], [ 540, 1 ], [ 564, 1 ], [ 578, 1 ], [ 583, 2 ], [ 589, 1 ] ]
+HIT McL |G|=898128000 class 199 |H|=120 index 7484400 interval orders [ 120, 720, 3000, 9720, 40320, 58320, 898128000 ]
+HIT McL.2 |G|=1796256000 class 478 |H|=240 index 7484400 interval orders [ 240, 1440, 6000, 19440, 80640, 116640, 1796256000 ]
+AMBIGUOUS 2.S8 |G|=80640 class 301 |H|=192 index 420 multiplicities [ [ 301, 1 ], [ 329, 1 ], [ 343, 1 ], [ 348, 1 ], [ 350, 2 ], [ 354, 1 ] ]
+AMBIGUOUS He |G|=4030387200 class 1560 |H|=1440 index 2798880 multiplicities [ [ 1560, 1 ], [ 1614, 1 ], [ 1693, 1 ], [ 1695, 1 ], [ 1697, 2 ], [ 1698, 1 ] ]
+AMBIGUOUS S4(4).2 |G|=1958400 class 844 |H|=240 index 8160 multiplicities [ [ 844, 1 ], [ 915, 1 ], [ 989, 1 ], [ 996, 2 ], [ 998, 1 ], [ 1001, 1 ] ]
+AMBIGUOUS S4(4).2 |G|=1958400 class 846 |H|=240 index 8160 multiplicities [ [ 846, 1 ], [ 916, 1 ], [ 988, 1 ], [ 997, 2 ], [ 999, 1 ], [ 1001, 1 ] ]
+AMBIGUOUS S4(4).2 |G|=1958400 class 848 |H|=240 index 8160 multiplicities [ [ 848, 1 ], [ 915, 1 ], [ 989, 1 ], [ 994, 2 ], [ 998, 1 ], [ 1001, 1 ] ]
+AMBIGUOUS S4(4).2 |G|=1958400 class 850 |H|=240 index 8160 multiplicities [ [ 850, 1 ], [ 916, 1 ], [ 988, 1 ], [ 995, 2 ], [ 999, 1 ], [ 1001, 1 ] ]
+AMBIGUOUS (A5xA5):4 |G|=14400 class 61 |H|=16 index 900 multiplicities [ [ 61, 1 ], [ 93, 1 ], [ 118, 1 ], [ 138, 2 ], [ 154, 1 ], [ 162, 1 ] ]
+AMBIGUOUS (A5xA5):4 |G|=14400 class 62 |H|=16 index 900 multiplicities [ [ 62, 1 ], [ 92, 1 ], [ 118, 1 ], [ 152, 2 ], [ 154, 1 ], [ 162, 1 ] ]
+AMBIGUOUS (A8x3):2 |G|=120960 class 583 |H|=288 index 420 multiplicities [ [ 583, 1 ], [ 621, 1 ], [ 641, 1 ], [ 649, 1 ], [ 651, 2 ], [ 658, 1 ] ]
+AMBIGUOUS S8x2 |G|=80640 class 1176 |H|=192 index 420 multiplicities [ [ 1176, 1 ], [ 1232, 1 ], [ 1267, 1 ], [ 1279, 1 ], [ 1282, 2 ], [ 1291, 1 ] ]
+AMBIGUOUS (S5xS5):2 |G|=28800 class 290 |H|=32 index 900 multiplicities [ [ 290, 1 ], [ 389, 1 ], [ 462, 1 ], [ 541, 2 ], [ 543, 1 ], [ 560, 1 ] ]
+AMBIGUOUS (S5xS5):2 |G|=28800 class 296 |H|=32 index 900 multiplicities [ [ 296, 1 ], [ 392, 1 ], [ 462, 1 ], [ 506, 2 ], [ 543, 1 ], [ 560, 1 ] ]
+AMBIGUOUS 2^5:S5` |G|=3840 class 784 |H|=48 index 80 multiplicities [ [ 784, 1 ], [ 890, 1 ], [ 934, 2 ], [ 944, 1 ], [ 948, 1 ], [ 953, 1 ] ]
+AMBIGUOUS S8xS3 |G|=241920 class 2580 |H|=576 index 420 multiplicities [ [ 2580, 1 ], [ 2668, 1 ], [ 2716, 1 ], [ 2731, 1 ], [ 2734, 2 ], [ 2749, 1 ] ]
+AMBIGUOUS S4(5) |G|=4680000 class 126 |H|=36 index 130000 multiplicities [ [ 126, 1 ], [ 169, 1 ], [ 207, 1 ], [ 241, 2 ], [ 301, 1 ], [ 307, 1 ] ]
+HIT S6(2) |G|=1451520 class 705 |H|=42 index 34560 interval orders [ 42, 336, 1512, 5040, 12096, 40320, 1451520 ]
+AMBIGUOUS 2^5:S6 |G|=23040 class 1668 |H|=96 index 240 multiplicities [ [ 1668, 1 ], [ 1817, 1 ], [ 1887, 1 ], [ 1905, 2 ], [ 1907, 1 ], [ 1916, 1 ] ]
+AMBIGUOUS 2^5:S6 |G|=23040 class 1671 |H|=96 index 240 multiplicities [ [ 1671, 1 ], [ 1817, 1 ], [ 1887, 1 ], [ 1904, 2 ], [ 1907, 1 ], [ 1916, 1 ] ]
+HIT 2.S6(2) |G|=2903040 class 952 |H|=84 index 34560 interval orders [ 84, 672, 3024, 10080, 24192, 80640, 2903040 ]
+AMBIGUOUS 2.(2^5:S6) |G|=46080 class 1898 |H|=192 index 240 multiplicities [ [ 1898, 1 ], [ 2042, 1 ], [ 2113, 1 ], [ 2129, 2 ], [ 2130, 1 ], [ 2140, 1 ] ]
+AMBIGUOUS 2.(2^5:S6) |G|=46080 class 1900 |H|=192 index 240 multiplicities [ [ 1900, 1 ], [ 2042, 1 ], [ 2113, 1 ], [ 2128, 2 ], [ 2130, 1 ], [ 2140, 1 ] ]
+AMBIGUOUS 2.(2^4:S5) |G|=3840 class 161 |H|=48 index 80 multiplicities [ [ 161, 1 ], [ 192, 1 ], [ 211, 2 ], [ 216, 1 ], [ 219, 1 ], [ 221, 1 ] ]
+AMBIGUOUS U4(3).2^2_133 |G|=13063680 class 1441 |H|=384 index 34020 multiplicities [ [ 1441, 1 ], [ 1549, 1 ], [ 1663, 1 ], [ 1718, 1 ], [ 1768, 2 ], [ 1789, 1 ] ]
+AMBIGUOUS (A8xA4):2 |G|=483840 class 2780 |H|=1152 index 420 multiplicities [ [ 2780, 1 ], [ 2848, 1 ], [ 2886, 1 ], [ 2897, 1 ], [ 2900, 2 ], [ 2914, 1 ] ]
+AMBIGUOUS A12 |G|=239500800 class 2481 |H|=12960 index 18480 multiplicities [ [ 2481, 1 ], [ 2502, 1 ], [ 2527, 1 ], [ 2531, 1 ], [ 2533, 2 ], [ 2537, 1 ] ]
+AMBIGUOUS G2(4) |G|=251596800 class 4226 |H|=1920 index 131040 multiplicities [ [ 4226, 1 ], [ 4260, 1 ], [ 4292, 1 ], [ 4298, 1 ], [ 4299, 2 ], [ 4300, 1 ] ]
+HIT Co3 |G|=495766656000 class 2017 |H|=1440 index 344282400 interval orders [ 1440, 8640, 116640, 699840, 756000, 2903040, 495766656000 ]
+AMBIGUOUS 2^4`A8 |G|=322560 class 1114 |H|=768 index 420 multiplicities [ [ 1114, 1 ], [ 1150, 1 ], [ 1165, 1 ], [ 1170, 1 ], [ 1172, 2 ], [ 1176, 1 ] ]
+AMBIGUOUS 2^6:U4(2) |G|=1658880 class 8336 |H|=720 index 2304 multiplicities [ [ 8336, 1 ], [ 8464, 1 ], [ 8593, 1 ], [ 8595, 2 ], [ 8600, 1 ], [ 8602, 1 ] ]
+AMBIGUOUS 2^6:U4(2) |G|=1658880 class 8415 |H|=960 index 1728 multiplicities [ [ 8415, 1 ], [ 8519, 1 ], [ 8595, 2 ], [ 8596, 1 ], [ 8601, 1 ], [ 8602, 1 ] ]
+AMBIGUOUS 2^6:A8 |G|=1290240 class 14607 |H|=576 index 2240 multiplicities [ [ 14607, 1 ], [ 14860, 1 ], [ 15111, 1 ], [ 15114, 2 ], [ 15119, 1 ], [ 15124, 1 ] ]
+AMBIGUOUS 2^6:A8 |G|=1290240 class 14611 |H|=576 index 2240 multiplicities [ [ 14611, 1 ], [ 14859, 1 ], [ 15110, 1 ], [ 15113, 2 ], [ 15119, 1 ], [ 15124, 1 ] ]
+AMBIGUOUS 2^6:A8 |G|=1290240 class 14651 |H|=720 index 1792 multiplicities [ [ 14651, 1 ], [ 14900, 1 ], [ 15113, 2 ], [ 15117, 1 ], [ 15120, 1 ], [ 15124, 1 ] ]
+AMBIGUOUS 2^6:A8 |G|=1290240 class 14652 |H|=720 index 1792 multiplicities [ [ 14652, 1 ], [ 14900, 1 ], [ 15114, 2 ], [ 15117, 1 ], [ 15120, 1 ], [ 15124, 1 ] ]
+AMBIGUOUS 2^6:A8 |G|=1290240 class 15038 |H|=3072 index 420 multiplicities [ [ 15038, 1 ], [ 15078, 1 ], [ 15112, 1 ], [ 15119, 1 ], [ 15120, 2 ], [ 15124, 1 ] ]
+AMBIGUOUS S12 |G|=479001600 class 10611 |H|=25920 index 18480 multiplicities [ [ 10611, 1 ], [ 10653, 1 ], [ 10705, 1 ], [ 10710, 1 ], [ 10715, 2 ], [ 10723, 1 ] ]
+AMBIGUOUS HS.2 |G|=88704000 class 1977 |H|=768 index 115500 multiplicities [ [ 1977, 1 ], [ 2008, 1 ], [ 2035, 1 ], [ 2048, 1 ], [ 2055, 2 ], [ 2057, 1 ] ]
+AMBIGUOUS He.2 |G|=8060774400 class 1893 |H|=2880 index 2798880 multiplicities [ [ 1893, 1 ], [ 1905, 1 ], [ 1925, 1 ], [ 1928, 1 ], [ 1929, 2 ], [ 1930, 1 ] ]
+scanned 414 tables; size-7 upper intervals: 3936; marks-exact hits: 6; ambiguous cases: 61
+UNRESOLVED (|G| = 960 above FLR_RESOLVE_BOUND) 2^4:A5` class 33
+UNRESOLVED (|G| = 1920 above FLR_RESOLVE_BOUND) 2^4:S5 class 137
+UNRESOLVED (|G| = 1920 above FLR_RESOLVE_BOUND) 2^(1+4)-:A5 class 57
+UNRESOLVED (|G| = 3840 above FLR_RESOLVE_BOUND) 2.(2^4:S5) class 161
+UNRESOLVED (|G| = 3840 above FLR_RESOLVE_BOUND) 2^(1+4)-.S5 class 177
+UNRESOLVED (|G| = 3840 above FLR_RESOLVE_BOUND) 2^5:S5` class 784
+UNRESOLVED (|G| = 5760 above FLR_RESOLVE_BOUND) 2^4:A6 class 73
+UNRESOLVED (|G| = 5760 above FLR_RESOLVE_BOUND) 2^4:A6 class 72
+UNRESOLVED (|G| = 11520 above FLR_RESOLVE_BOUND) 2^4:S6 class 355
+UNRESOLVED (|G| = 11520 above FLR_RESOLVE_BOUND) 2^4:S6 class 345
+UNRESOLVED (|G| = 14400 above FLR_RESOLVE_BOUND) (A5xA5):4 class 61
+UNRESOLVED (|G| = 14400 above FLR_RESOLVE_BOUND) (A5xA5):4 class 62
+UNRESOLVED (|G| = 20160 above FLR_RESOLVE_BOUND) A8 class 95
+UNRESOLVED (|G| = 23040 above FLR_RESOLVE_BOUND) 2^5:S6 class 1671
+UNRESOLVED (|G| = 23040 above FLR_RESOLVE_BOUND) 2^5:S6 class 1668
+UNRESOLVED (|G| = 28800 above FLR_RESOLVE_BOUND) (S5xS5):2 class 290
+UNRESOLVED (|G| = 28800 above FLR_RESOLVE_BOUND) (S5xS5):2 class 296
+UNRESOLVED (|G| = 40320 above FLR_RESOLVE_BOUND) S8 class 249
+UNRESOLVED (|G| = 40320 above FLR_RESOLVE_BOUND) 2.A8 class 122
+UNRESOLVED (|G| = 46080 above FLR_RESOLVE_BOUND) 2.(2^5:S6) class 1898
+UNRESOLVED (|G| = 46080 above FLR_RESOLVE_BOUND) 2.(2^5:S6) class 1900
+UNRESOLVED (|G| = 51888 above FLR_RESOLVE_BOUND) L2(47) class 9
+UNRESOLVED (|G| = 51888 above FLR_RESOLVE_BOUND) L2(47) class 8
+UNRESOLVED (|G| = 58800 above FLR_RESOLVE_BOUND) L2(49) class 21
+UNRESOLVED (|G| = 58800 above FLR_RESOLVE_BOUND) L2(49) class 20
+UNRESOLVED (|G| = 80640 above FLR_RESOLVE_BOUND) S8x2 class 1176
+UNRESOLVED (|G| = 80640 above FLR_RESOLVE_BOUND) 2.S8 class 301
+UNRESOLVED (|G| = 120960 above FLR_RESOLVE_BOUND) L3(4).3.2_3 class 91
+UNRESOLVED (|G| = 120960 above FLR_RESOLVE_BOUND) L3(4).6 class 91
+UNRESOLVED (|G| = 120960 above FLR_RESOLVE_BOUND) (A8x3):2 class 583
+UNRESOLVED (|G| = 241920 above FLR_RESOLVE_BOUND) S8xS3 class 2580
+UNRESOLVED (|G| = 241920 above FLR_RESOLVE_BOUND) L3(4).D12 class 305
+UNRESOLVED (|G| = 246480 above FLR_RESOLVE_BOUND) L2(79) class 14
+UNRESOLVED (|G| = 246480 above FLR_RESOLVE_BOUND) L2(79) class 13
+UNRESOLVED (|G| = 262080 above FLR_RESOLVE_BOUND) L2(64) class 16
+UNRESOLVED (|G| = 322560 above FLR_RESOLVE_BOUND) 2^4`A8 class 1114
+UNRESOLVED (|G| = 322560 above FLR_RESOLVE_BOUND) 2^4:A8 class 1701
+UNRESOLVED (|G| = 483840 above FLR_RESOLVE_BOUND) (A8xA4):2 class 2780
+UNRESOLVED (|G| = 1290240 above FLR_RESOLVE_BOUND) 2^6:A8 class 14652
+UNRESOLVED (|G| = 1290240 above FLR_RESOLVE_BOUND) 2^6:A8 class 14651
+UNRESOLVED (|G| = 1290240 above FLR_RESOLVE_BOUND) 2^6:A8 class 14611
+UNRESOLVED (|G| = 1290240 above FLR_RESOLVE_BOUND) 2^6:A8 class 14607
+UNRESOLVED (|G| = 1290240 above FLR_RESOLVE_BOUND) 2^6:A8 class 15038
+UNRESOLVED (|G| = 1451520 above FLR_RESOLVE_BOUND) S6(2) class 705
+UNRESOLVED (|G| = 1658880 above FLR_RESOLVE_BOUND) 2^6:U4(2) class 8336
+UNRESOLVED (|G| = 1658880 above FLR_RESOLVE_BOUND) 2^6:U4(2) class 8415
+UNRESOLVED (|G| = 1958400 above FLR_RESOLVE_BOUND) S4(4).2 class 846
+UNRESOLVED (|G| = 1958400 above FLR_RESOLVE_BOUND) S4(4).2 class 844
+UNRESOLVED (|G| = 1958400 above FLR_RESOLVE_BOUND) S4(4).2 class 850
+UNRESOLVED (|G| = 1958400 above FLR_RESOLVE_BOUND) S4(4).2 class 848
+UNRESOLVED (|G| = 2903040 above FLR_RESOLVE_BOUND) 2.S6(2) class 952
+UNRESOLVED (|G| = 3265920 above FLR_RESOLVE_BOUND) U4(3) class 231
+UNRESOLVED (|G| = 4680000 above FLR_RESOLVE_BOUND) S4(5) class 126
+UNRESOLVED (|G| = 6531840 above FLR_RESOLVE_BOUND) U4(3).2_1 class 719
+UNRESOLVED (|G| = 6531840 above FLR_RESOLVE_BOUND) U4(3).2_3 class 371
+UNRESOLVED (|G| = 13063680 above FLR_RESOLVE_BOUND) U4(3).2^2_133 class 1441
+UNRESOLVED (|G| = 44352000 above FLR_RESOLVE_BOUND) HS class 511
+UNRESOLVED (|G| = 88704000 above FLR_RESOLVE_BOUND) HS.2 class 1977
+UNRESOLVED (|G| = 239500800 above FLR_RESOLVE_BOUND) A12 class 2481
+UNRESOLVED (|G| = 244823040 above FLR_RESOLVE_BOUND) M24 class 1478
+UNRESOLVED (|G| = 251596800 above FLR_RESOLVE_BOUND) G2(4) class 4226
+UNRESOLVED (|G| = 479001600 above FLR_RESOLVE_BOUND) S12 class 10611
+UNRESOLVED (|G| = 898128000 above FLR_RESOLVE_BOUND) McL class 199
+UNRESOLVED (|G| = 1796256000 above FLR_RESOLVE_BOUND) McL.2 class 478
+UNRESOLVED (|G| = 4030387200 above FLR_RESOLVE_BOUND) He class 1560
+UNRESOLVED (|G| = 8060774400 above FLR_RESOLVE_BOUND) He.2 class 1893
+UNRESOLVED (|G| = 495766656000 above FLR_RESOLVE_BOUND) Co3 class 2017

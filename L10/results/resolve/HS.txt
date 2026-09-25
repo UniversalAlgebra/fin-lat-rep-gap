@@ -1,0 +1,3 @@
+AMBIGUOUS HS |G|=44352000 class 511 |H|=384 index 115500 multiplicities [ [ 511, 1 ], [ 540, 1 ], [ 564, 1 ], [ 578, 1 ], [ 583, 2 ], [ 589, 1 ] ]
+scanned 1 tables; size-7 upper intervals: 21; marks-exact hits: 0; ambiguous cases: 1
+EXPLICIT HS class 511: |G| = 44352000 |H| = 384 (((C4 x C4) : (C2 x C2)) : S3) index 115500 core-free true; interval size 7 orders [ 768, 1536, 10752, 40320, 40320 ] structures [ "((C2 x Q8) : (C2 x C2)) : D12", "(C4 x C4 x C4) : S4", "(C4 x C4 x C4) : PSL(3,2)", "PSL(3,4) : C2", "PSL(3,4) : C2" ] covers [ [ 0, 1 ], [ 0, 4 ], [ 0, 5 ], [ 1, 2 ], [ 2, 3 ], [ 3, 6 ], [ 4, 6 ], [ 5, 6 ] ]; target: false (2442 ms)
